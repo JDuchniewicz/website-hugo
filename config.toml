@@ -68,8 +68,8 @@ disableHugoGeneratorInject = false
 
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
-  customCSS = []
-  customJS  = []
+  customCSS = ["css/_navbar.scss"]
+  customJS  = ["js/scroll_navbar.js"]
 
   # Toggle this option need to rebuild SCSS, requires extended version of Hugo
   justifyContent = false  # Set "text-align: justify" to .content.
@@ -107,11 +107,11 @@ disableHugoGeneratorInject = false
 
   [[params.social]]
     name = "linkedin"
-    url  = "https://www.linkedin.com/jduchnie"
+    url  = "https://www.linkedin.com/JDuchniewicz"
     
 [languages]
   [languages.en]
-    subtitle  = "Hello Friend NG Theme"
+    subtitle  = "Something catchy here?"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 

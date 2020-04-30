@@ -1,0 +1,8 @@
+{{- if and (gt .WordCount 100 ) (.Params.toc) }}
+    <hr />
+    <aside id="toc">
+    <div class="toc-title">{{ i18n "tableOfContents" }}</div>
+        {{ .TableOfContents }}
+    </aside>
+    <hr />
+{{- end }}
