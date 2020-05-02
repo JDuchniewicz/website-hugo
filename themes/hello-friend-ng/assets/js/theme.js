@@ -10,6 +10,8 @@ if (getTheme !== null) {
   isDark ? metaThemeColor.setAttribute("content", "#252627") : metaThemeColor.setAttribute("content", "#fafafa");
 }
 
+changeFavicon();
+
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
   window.localStorage &&

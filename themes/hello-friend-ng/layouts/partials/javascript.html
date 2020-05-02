@@ -3,7 +3,8 @@
 {{ $prism := resources.Get "js/prism.js" }}
 {{ $theme := resources.Get "js/theme.js" }}
 {{ $navbar := resources.Get "js/scroll_navbar.js" }}
-{{ $secureJS := slice $main $menu $prism $theme $navbar | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ $progress := resources.Get "js/progress.js" }}
+{{ $secureJS := slice $main $menu $prism $theme $navbar $progress | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
 {{- if .Site.GoogleAnalytics }}
