@@ -1,25 +1,17 @@
-html {
+html, body {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 .toc {
-    position: fixed;
-    top: 50%;
-    right: 5%;
-    width: 20%;
-    transform: translateY(-50%);
-    border-left: 1.5px solid #e5effac5;
+    margin-top: 2rem;
     padding-left: 0;
-    padding-bottom: 1rem;
-}
-
-.toc li.active > a {
-    color: #333;
-    font-weight: 500;
+    border-left: 1px solid #e5effac5;
 }
 
 .toc a {
     text-decoration: none;
+    text-align: left;
     display: block;
     padding: .125rem 0;
     color: #ccc;
@@ -27,8 +19,12 @@ html {
 }
 
 .toc a:hover,
-.toc a.focus {
+.toc a:focus {
     color: #666;
+}
+
+.active {
+    font-weight: bold;
 }
 
 * {
@@ -45,9 +41,21 @@ li {
     margin-left: 1rem;
 }
 
-h1 {
-    font-weight: 300;
+.post-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 15em;
+	max-width: 800px;
+	width: 90%;
+	margin: 0 auto;
 }
+
+// TODO: fix, when too many headers it won't scroll
+.post-wrapper > aside {
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+}
+
 
 @media (max-width: 1080px) {
     main {
