@@ -79,13 +79,17 @@ disableHugoGeneratorInject = false
 
   # Default theme "light" or "dark"
   defaultTheme = "dark"
-  themeColor = "#252627"
+  themeColorDark = "#252627"
+  themeColorLight = "#fafafa"
 
   # Colors for favicons
   [params.favicon.color]
-    mask = "#252627"
-    msapplication = "#252627"
-    theme = "#252627"
+    maskDark = "#252627"
+    maskLight = "#fafafa"
+    msapplicationDark = "#252627"
+    msapplicationLight = "#fafafa"
+    themeDark = "#252627"
+    themeLight = "#fafafa"
 
   [params.logo]
     logoText     = "jduchniewicz"
