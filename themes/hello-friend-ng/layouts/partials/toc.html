@@ -1,8 +1,44 @@
 {{- if and (gt .WordCount 100 ) (.Params.toc) }}
-    <hr />
-    <aside id="toc">
-    <div class="toc-title">{{ i18n "tableOfContents" }}</div>
-        {{ .TableOfContents }}
+
+    {{ $headers := findRE "<h[1-4].*?>(.|\n])+?</h[1-4]>" .Content }}
+    {{ if ge (len $headers) 1 }}
+    {{ $h1_n := len (findRE "(.|\n])+?" .Content) }}
+    {{ $re := (cond (eq $h1_n 0) "<h[2-4]" "<h[1-4]") }}
+    {{ $renum := (cond (eq $h1_n 0) "[2-4]" "[1-4]") }}
+
+    <div class="toc">
+        <a class="page-header" href="#"><strong> TOP </strong></a>
+        <hr>
+        <div id="page scrollspy" class="toc-nav">
+            {{ range $headers }}
+            {{ $header := . }}
+            {{ range first 1 (findRE $re $header 1) }}
+            {{ range findRE $renum . 1 }}
+            {{ $next_heading := (cond (eq $h1_n 0) (sub (int . ) 1) (int . ) ) }}
+            {{ range seq $next_heading }}
+            <ul class="nav" id="">
+                {{ end }}
+                {{ $anchorId := (replaceRE ".* id=\"(.*?)\".*" "$1" $header ) }}
+                <li class="nav-item">
+                    <a class="nav-link text-left" href="#{{ $anchorId }}">
+                        {{ $header | plainify | htmlUnescape }}
+                    </a>
+                </li>
+                {{ range seq $next_heading }}
+            </ul>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+            {{ end }}
+
+        </div>
+
+    </div>
+    <aside>
+        <a href="#" id="GoTop">
+            <i class="fa fa-arrow-up"></i>
+        </a>
     </aside>
-    <hr />
+    {{ end }}
+
 {{- end }}
