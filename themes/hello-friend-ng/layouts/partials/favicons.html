@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon_16 | relURL}}">
     <link rel="manifest" href="{{ cond (eq $.Site.Params.defaultTheme "dark") ("site-dark.webmanifest" | relURL) ("site-light.webmanifest" | relURL)}}">
     <link rel="mask-icon" href="{{ $safari_pinned_tab | relURL}}" color="{{ cond (eq $.Site.Params.defaultTheme "dark") .maskDark .maskLight }}">
-    <link rel="shortcut icon" href="{{ $shortcut_icon | relURL}}">
+    <link id="dynamic-favicon" rel="shortcut icon" href="{{ $shortcut_icon | relURL}}">
     <meta name="msapplication-TileColor" content="{{ cond (eq $.Site.Params.defaultTheme "dark") .msapplicationDark .msapplicationLight }}">
     <meta name="theme-color" content="{{ cond (eq $.Site.Params.defaultTheme "dark") .themeDark .themeLight }}">
 {{ end }}

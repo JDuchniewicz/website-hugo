@@ -28,7 +28,7 @@ function changeFavicon() {
   var link = document.createElement("link"), oldLink = document.getElementById("dynamic-favicon");
   link.id = "dynamic-favicon";
   link.rel = "shortcut icon";
-  link.href = isDark ? "http://jduchniewicz.com/favicon-dark.ico" : "http://jduchniewicz.com/favicon-light.ico";
+  link.href = document.body.classList.contains("dark-theme") ? "http://jduchniewicz.com/favicon-dark.ico" : "http://jduchniewicz.com/favicon-light.ico";
 
   if (oldLink) {
     document.head.removeChild(oldLink);
