@@ -41,19 +41,21 @@ li {
     margin-left: 1rem;
 }
 
-.post-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 15em;
-	max-width: 800px;
-	width: 90%;
-	margin: 0 auto;
-}
-
-// TODO: fix, when too many headers it won't scroll
-.post-wrapper > aside {
-    position: sticky;
-    top: 7rem;
-    align-self: start;
+// For non-mobile turn on post-wrapper
+@media (min-width: 1080px) {
+    .post-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 15em;
+        max-width: 800px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    // TODO: fix, when too many headers it won't scroll
+    .post-wrapper > aside {
+        position: sticky;
+        top: 7rem;
+        align-self: start;
+    }
 }
 
 
@@ -65,4 +67,10 @@ li {
     .toc {
         display: none;
     }
+    
+    // for mobile devices flexbox does not like grid - need to turn off aligning
+    .content {
+        align-items: unset;
+    }
+
 }
