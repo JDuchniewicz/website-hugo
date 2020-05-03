@@ -75,6 +75,8 @@ li {
 
     pre code {
         white-space: pre;
+        white-space: -moz-pre-wrap;
+        word-wrap: break-word;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
