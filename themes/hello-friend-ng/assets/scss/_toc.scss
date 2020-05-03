@@ -73,4 +73,14 @@ li {
         align-items: unset;
     }
 
+    pre code {
+        white-space: pre;
+        overflow-x: auto;
+    }
+   
+/*
+    pre {
+        scrollbar-color: #eeeeee #ffffff;
+    }
+    */
 }
