@@ -1,6 +1,6 @@
 $(document).ready(() => {
     var getMax = ()=>{
-        return $("article").height() - $(window).height();
+        return ($("article").height() + 300) - $(window).height();
     }
 
     var getValue = ()=> {

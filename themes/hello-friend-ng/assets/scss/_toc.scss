@@ -73,17 +73,13 @@ li {
         align-items: unset;
     }
 
+    // why webdev must be so hackish???
     pre code {
         white-space: pre;
         white-space: -moz-pre-wrap;
-        word-wrap: normal;
+        word-wrap: normal; // for Safari because break does not work properly
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
    
-/*
-    pre {
-        scrollbar-color: #eeeeee #ffffff;
-    }
-    */
 }

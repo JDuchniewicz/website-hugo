@@ -58,7 +58,7 @@ disableHugoGeneratorInject = false
   keywords = ""
   images = [""]
 
-  homeSubtitle = "Little bits of this, litte bits of that"
+  homeSubtitle = "Little bits of this, litte bytes of that."
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = ""
@@ -119,7 +119,7 @@ disableHugoGeneratorInject = false
     
 [languages]
   [languages.en]
-    subtitle  = "Something catchy here?"
+    subtitle  = "Personal space"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 

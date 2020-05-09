@@ -3,8 +3,7 @@ title = "{{ replace .Name "-" " " | title }}"
 description = ""
 date = {{ .Date }}
 type = ["posts","post"]
-toc = [
-]
+toc = true
 tags = [
 ]
 categories = [
@@ -12,3 +11,6 @@ categories = [
 [ author ]
   name = "Jakub Duchniewicz"
 +++
+
+
+[PolyEngine]: https://github.com/PolyEngineTeam/PolyEngine/
