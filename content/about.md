@@ -12,16 +12,16 @@ Once it is complete I will publish it here and while I am digging more into it, 
 
 ## What's in here?
 On this website you can find some thoughts of mine on several topics ranging from:
-- Microcontrollers and FPGA's 
-- Game Engines 
-- Machine Learning
-- Linux and other OS's topics
+* Microcontrollers and FPGA's 
+* Game Engines 
+* Machine Learning
+* Linux and other OS's topics
 
 Please feel free to reach out to me, or leave a comment, I am always eager to have a chat or give a helping hand!
 
 ### Little bit more
 I am an active developer of [PolyEngine], and if you would like to join us don't hesitate! 
-Currently it undergoes some restructurization and implementation of Editor and Vulkan rendering engine (we used OpenGL based one so far), so if you are specialized in either Qt or Vulkan -- we need you! (And if not, then also <3)
+Currently it undergoes some restructurization and implementation of Editor and Vulkan rendering engine (we used OpenGL based one so far), so if you are specialized in either Qt or Vulkan -- we need you! (We welcome you anyway :heart:)
 
 
 [PolyEngine]: https://github.com/PolyEngineTeam/PolyEngine/
