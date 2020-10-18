@@ -19,18 +19,25 @@ This project was probably the most ambitious one in my whole life, and what is m
 
 In case you are a busy person and don't want to dig into the thesis too much, here is the link to my [about] subpage containing the abstract of the paper, and here are some sounds generated on the FPGA and recorded on the Linux side of the SoC.
 #### Sine wave
-<audio src="69sine.wav" controls preload>dupa</audio>
+<audio src="/69sine.mp3" controls preload></audio>
 
 #### Square wave
+<audio src="/69square.mp3" controls preload></audio>
+
 #### Sawtooth wave
+<audio src="/69sawtooth.mp3" controls preload></audio>
+
 #### Triangle wave
+<audio src="/69triangle.mp3" controls preload></audio>
 
 #### Polyphonic capabilities
+<audio src="/polyphony.mp3" controls preload></audio>
 
 #### Beatles - Let it be intro (tragic cover by me…)
+<audio src="/letitbe.mp3" controls preload></audio>
 
 #### Favourite song of Pope JP II - Barka
-
+<audio src="/barka.mp3" controls preload></audio>
 
 ## Line-up
 
