@@ -5,6 +5,7 @@ date = 2020-09-29T18:51:47+02:00
 type = ["posts","post"]
 toc = true
 tags = [
+"ALSA", "Linux", "sound",  "DSP", "system", "configuration"
 ]
 categories = [
 ]

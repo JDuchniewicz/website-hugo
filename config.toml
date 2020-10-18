@@ -40,8 +40,14 @@ disableHugoGeneratorInject = false
 [author]
   name = "Jakub Duchniewicz"
 
-[blackfriday]
-  hrefTargetBlank = true
+[markup]
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+#[blackfriday]
+#  hrefTargetBlank = true
 
 [taxonomies]
   tag      = "tags"
