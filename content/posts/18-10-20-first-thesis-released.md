@@ -13,7 +13,9 @@ categories = [
 +++
 
 ## Introduction
-I am bursting with excitement as I write this, because I can finally share with the world something I have been working very hard for the first half of this too-eventful year! Today I have uploaded my Bachelor's thesis for open access - it can be viewed at [this link]. If this was something not worth your time or digital space ([already polluted]), I would not blog about it :)
+I am bursting with excitement as I am writing this - I can finally share with the world something I have been working very hard for the first half of this overly eventful year! 
+
+Today I have uploaded my Bachelor's thesis for open access - it can be viewed at [this link]. If this was something not worth your time or digital space ([already polluted]), I would not blog about it :)
 
 This project was probably the most ambitious one in my whole life, and what is most important - successful. Back in my previous job, my colleagues who have already graduated presented me with their theses, one of which utilized an FPGA for megahertz signal synthesis. Much as I like tackling challenges, [black magic] was not something I was eager to dab in. However, my curiosity on the subject of FPGAs was born, and soon I begun development of my thesis. 
 
@@ -54,7 +56,7 @@ Barring some digital circuits courses at WUT, I was on uncharted waters and had 
 The code (with detailed guides etc.) will be available on GitHub soon (although astute readers will find almost all necessities in the paper already).
 
 ## Other updates
-I recently got chosen to participate in a project on element14 - a sustainable solution utilizing less than 1m<sup>3</sup> of space [Envidrawer]. I will probably post some more updates regarding this once the project is worth showing off :) 
+I recently got chosen to participate in a project on element14 - a sustainable closed-space smart gardening solution utilizing less than 1m<sup>3</sup> of space [Envidrawer]. I will probably post some more updates regarding this once the project is worth showing off :) 
 
 I am gradually falling in love with Rust and will be trying some embedded solutions, probably mixing some freshly learned Machine Learning tricks to spice it up. Meanwhile, stay tuned for first post of FPGA series, coming this month!
 
