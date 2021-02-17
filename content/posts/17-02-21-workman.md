@@ -28,7 +28,7 @@ I decided to switch layouts because I started to feel fatigue after prolonged se
 ## Enter Workman
 My interest was piqued by several layouts, namely Colemak, Colemak-DH and classic and well-known Dvorak. However, I was sold on Workman as the upgraded Colemak (which is also repaired by the DH mod). I may try the DH mod in some time and decide it is superior to Workman but this is unlikely. Having spent just 12 hours practicing I am able to type with 50 WPM and found most keys easy to learn and replace.
 
-![Workman layout](/static/workman/workman.png)
+{{< image src="/workman/workman.png" alt="Workman layout" position="center" style="border-radius: 8px;" >}}
 
 As for the practice website, I can highly recommend [keybr], which guides you quite well through all keys in a reasonable order, gives you neat graphs and even some competition! Additionally if you want to have some fun while you are at it, try [ztype] - a small typing space shooter game.
 
