@@ -13,11 +13,11 @@ categories = [
 +++
 
 ## Introduction
-I am bursting with excitement as I am writing this - I can finally share with the world something I have been working very hard for the first half of this overly eventful year! 
+I am bursting with excitement as I am writing this - I can finally share with the world something I have been working very hard for the first half of this overly eventful year!
 
 Today I have uploaded my Bachelor's thesis for open access - it can be viewed at [this link]. If this was something not worth your time or digital space ([already polluted]), I would not blog about it :)
 
-This project was probably the most ambitious one in my whole life, and what is most important - successful. Back in my previous job, my colleagues who have already graduated presented me with their theses, one of which utilized an FPGA for megahertz signal synthesis. Much as I like tackling challenges, [black magic] was not something I was eager to dab in. However, my curiosity on the subject of FPGAs was born, and soon I begun development of my thesis. 
+This project was probably the most ambitious one in my whole life, and what is most important - successful. Back in my previous job, my colleagues who have already graduated presented me with their theses, one of which utilized an FPGA for megahertz signal synthesis. Much as I like tackling challenges, [black magic] was not something I was eager to dab in. However, my curiosity on the subject of FPGAs was born, and soon I begun development of my thesis.
 
 In case you are a busy person and don't want to dig into the thesis too much, here is the link to my [about] subpage containing the abstract of the paper, and here are some sounds generated on the FPGA and recorded on the Linux side of the SoC.
 #### Sine wave
@@ -53,15 +53,18 @@ Barring some digital circuits courses at WUT, I was on uncharted waters and had 
 * Linux Device Drivers basics
 * Linux ALSA and DMA Drivers
 
+## Update 02.2021
+I did not write these blog entries yet as the end of the year time was rife with other project (Envidrawer, Robotics) and I will be coming back to the topic pretty soon from a different angle (I hope so!). If somebody cannot wait that long, please message me and I will be glad to share my experience.
+
 The code (with detailed guides etc.) will be available on GitHub soon (although astute readers will find almost all necessities in the paper already).
 
 ## Other updates
-I recently got chosen to participate in a project on element14 - a sustainable closed-space smart gardening solution utilizing less than 1m<sup>3</sup> of space [Envidrawer]. I will probably post some more updates regarding this once the project is worth showing off :) 
+I recently got chosen to participate in a project on element14 - a sustainable closed-space smart gardening solution utilizing less than 1m<sup>3</sup> of space [Envidrawer]. I will probably post some more updates regarding this once the project is worth showing off :)
 
 I am gradually falling in love with Rust and will be trying some embedded solutions, probably mixing some freshly learned Machine Learning tricks to spice it up. Meanwhile, stay tuned for first post of FPGA series, coming this month!
 
 Thanks for reading!
- 
+
 [this link]: https://jduchniewicz.com/FPGA-synth.pdf
 [already polluted]: https://www.visualcapitalist.com/wp-content/uploads/2019/04/data-generated-each-day-wide.html
 [black magic]: https://www.amazon.com/High-Speed-Digital-Design-Handbook/dp/0133957241
