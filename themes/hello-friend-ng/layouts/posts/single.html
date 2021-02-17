@@ -80,18 +80,16 @@
                         </div>
                     </div>
                 {{ end }}
-                {{- if .Site.DisqusShortname }}
-                    <div id="comments" class="thin">
-                        <script src="https://utteranc.es/client.js"
-                                repo="https://github.com/JDuchniewicz/website-hugo"
-                                issue-term="pathname"
-                                label="documentation"
-                                theme="github-dark"
-                                crossorigin="anonymous"
-                                async>
-                        </script>
-                    </div>
-                {{- end }}
+                <div id="comments" class="thin">
+                    <script src="https://utteranc.es/client.js"
+                            repo="JDuchniewicz/website-hugo"
+                            issue-term="pathname"
+                            label="documentation"
+                            theme="github-dark"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                </div>
         </main>
         {{ partial "toc.html" . }}
     </div>
