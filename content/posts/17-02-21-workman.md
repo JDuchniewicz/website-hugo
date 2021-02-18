@@ -52,15 +52,15 @@ The bindings can be seen here (the funny `^[` sign is the escape sign for the `A
 ```vimrc
 """ Workman
 " Map to Alt-yneo instead of hjkl
-nnoremap y h
-nnoremap n j
-nnoremap e k
-nnoremap o l
+nnoremap ^[y h
+nnoremap ^[n j
+nnoremap ^[e k
+nnoremap ^[o l
 
-vnoremap y h
-vnoremap n j
-vnoremap e k
-vnoremap o l
+vnoremap ^[y h
+vnoremap ^[n j
+vnoremap ^[e k
+vnoremap ^[o l
 ```
 
 In case you are not familiar with vim remappings, `nnoremap` is for the normal mode and `vnoremap` is for the visual. This way I can use my long-learned habits of `hjkl` with only a slight complication.
