@@ -13,6 +13,9 @@ categories = [
 +++
 
 ## Introduction
+### Update 28.02
+I am already writing with almost 70 wpm constant. So this is quite productive layout all in all.
+
 This entry is a special one! It is dedicated to people brave or crazy enough to do a keyboard layout switch. I won't go into details on why you should consider a different layout if you are like me, spending rather big part of your life going clack-clack and pretending you are working and not browsing reddit and social media. I curated some materials you may want to study in order to make up your mind:
 
 * [original] - The official Workman layout
