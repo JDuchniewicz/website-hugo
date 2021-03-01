@@ -14,6 +14,10 @@ categories = [
 
 ## Introduction
 #### [Original Chapter 1]
+
+#### Update 1.03.21
+Thank you wholeheartedly for the support and the comments on this post. Some mistakes were fixed and some things are now better clarified. Also thanks to soruh for the [optimization PR] to the repository. The relevant benchmarks are mentioned there and the code is parallelized with [rayon]. If you are interested in the discussion take a look [here].
+
 Every programmer wants to feel loved (yes I am looking at you!), be it by others or yourself. Usually you *really* love yourself when you accomplish something you are proud of. That is why from time to time programmers tend to learn languages (be it programming or spoken ones - unless you can talk to your fridge in assembly of course) or challenge themselves and write tough and unintelligible pieces of code which do something amazing. If you are like me and were always amazed by how the computer can render something resembling real life instead of just 2D graphics, you came to the right place!
 
 Cutting the slack, I will reimplement the amazing tutorial on [_Ray Tracing in One Weekend_] in the Rust programming language. This post is aimed at people who are interested in the subject of rendering and want to try Rust, or are simply curious about how things are done in this language. I will not go through all content, but only focus on parts which are starkly different from the original implementation. The code for this project is available on this GitHub [repo].
@@ -258,7 +262,7 @@ However, we will go even simpler route an simply provide various constructor fun
 
 You may have noticed the `self` and `mut self` arguments to the functions of this class (yes I know, it is a *struct*) - these are the indicators that this is a *method* compared to ordinary *associated function* (you may know them as *static methods* from C++).
 
-Probably quite important design decision worth mentioning now is that I am storing the *x, y, z* components separately instead of an array - or [`Vec`] in Rust terms. But there is one small issue related to arrays in Rust - they are inherently immutable, and mutating them would require me to either wrap them in [`Cell`] or bring upon myself wrath of the Rust gods for using [`unsafe`] code where I can avoid it. So, not wanting to add the cost of the [`Cell`] wrapper I decided to have three separate fields.
+Probably quite important design decision worth mentioning now is that I am storing the *x, y, z* components separately instead of a static array of this form: `[1.0, 2.0, 3.0];`. You could do both and just benchmark it later, but remember that you cannot modify elements of this array without a `&mut`, you also cannot resize this array (treat it as a statically allocated C array with normal Rust ownership rules). If you need resizable arrays on the spot then look no further than a *vector* or [`Vec`] in Rust terms. There are some situation in which you need more than one mutable reference to an object. In these circumstances, wrap them in [`Cell`] or bring upon thyself wrath of the Rust gods for using [`unsafe`] code where it can be avoided. It is often just a matter of preference, and what is more optimal for you!
 
 This brings us to the most glaring difference - `operator`s or the lack thereof. Rust handles them via *traits* and requires to provide the `impl` block if one wishes to use them with custom types. Thus, we have types such as [`Add`], [`AddAssign`] and others, where all we as implementors have to do is provide the similarly named function implementation.
 
@@ -398,7 +402,7 @@ impl Hittable for HittableList {
 }
 ```
 
-And now, before you start doubting your whole existence, let me explain why (and how) not to translate C++'s return-by-reference code. Remember that Rust is fond of moving rather than coping (unless the type is marked `Copy`), and here the `temp_rec` variable gets set(otherwise Rust will nag you about the uninitialized variable) and then is read from in the loop to be finally assigned to the outbound reference. And this is where all the trouble happens... Here, the `temp_rec` is moved out and Rust cannot trust you that it will be initialized again in the successive iterations. To be frank, this looks perfectly sound to me and I am not 100% sure that this is not a compiler bug (please correct me!).
+And now, before you start doubting your whole existence, let me explain why (and how) not to translate C++'s return-by-reference code. Remember that Rust is fond of moving rather than coping (unless the type is marked `Copy`), and here the `temp_rec` variable gets set(otherwise Rust will nag you about the uninitialized variable) and then is read from in the loop to be finally assigned to the outbound reference. And this is where all the trouble happens... Here, the `temp_rec` is moved out and Rust cannot trust you that it will be initialized again in the successive iterations. After some clarifications on [reddit] the problem boils down to passing uninitialized memory to a Rust function. This can be done with the *unsafe* code or a special wrapper - [`core::mem::MaybeUninit`]
 
 Since this guide is meant to introduce you to Rust and how it achieves its goals, this is a perfect opportunity for some rustacean culture!
 
@@ -538,6 +542,9 @@ Also, thank you kind reader for the patience to read this thing through. Don't h
 As of today, the subject of the error handling is so important, there is a whole [project group] in the Rust community, of which I am a proud member. Come over and chat with us if something is bothering you about the current state of error handling or you would like to get involved in the process.
 
 
+[optimization PR]: https://github.com/JDuchniewicz/rustracing/pull/1
+[rayon]: https://docs.rs/rayon/1.5.0/rayon/
+[here]: https://www.reddit.com/r/rust/comments/lukgyi/c_to_rust_introduction_with_practical_raytracing/
 
 [repo]:https://github.com/JDuchniewicz/rustracin://github.com/JDuchniewicz/rustracing
 [this]: https://raytracing.github.io/images/img-1.01-first-ppm-image.png
@@ -568,6 +575,9 @@ As of today, the subject of the error handling is so important, there is a whole
 
 
 [#77187]: https://github.com/rust-lang/rust/pull/77187
+
+[reddit]: https://www.reddit.com/r/rust/comments/lukgyi/c_to_rust_introduction_with_practical_raytracing/gp7m45i?utm_source=share&utm_medium=web2x&context=3
+[`core::mem::MaybeUninit`]: https://doc.rust-lang.org/core/mem/union.MaybeUninit.html
 
 [`match`]:https://doc.rust-lang.org/rust-by-example/flow_control/match.html
 [*panic*]:https://doc.rust-lang.org/stable/book/ch09-01-unrecoverable-errors-with-panic.html
