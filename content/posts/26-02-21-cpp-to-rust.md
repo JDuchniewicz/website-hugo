@@ -15,8 +15,8 @@ categories = [
 ## Introduction
 #### [Original Chapter 1]
 
-#### Update 1.03.21
-Thank you wholeheartedly for the support and the comments on this post. Some mistakes were fixed and some things are now better clarified. Also thanks to soruh for the [optimization PR] to the repository. The relevant benchmarks are mentioned there and the code is parallelized with [rayon]. If you are interested in the discussion take a look [here].
+#### Update
+Thank you wholeheartedly for the support and the comments on this post. Some mistakes were fixed and some things are now better clarified. Also thanks to soruh for the [optimization PR] to the repository (already merged). The relevant benchmarks are mentioned there and the code is parallelized with [rayon]. If you are interested in the discussion take a look [here]. The main branch contains some improvements over the original code in this post, so check it out for some cool things such as Rust macros or the aforementioned parallelization.
 
 Every programmer wants to feel loved (yes I am looking at you!), be it by others or yourself. Usually you *really* love yourself when you accomplish something you are proud of. That is why from time to time programmers tend to learn languages (be it programming or spoken ones - unless you can talk to your fridge in assembly of course) or challenge themselves and write tough and unintelligible pieces of code which do something amazing. If you are like me and were always amazed by how the computer can render something resembling real life instead of just 2D graphics, you came to the right place!
 
@@ -106,7 +106,7 @@ for i in 1..10 {
     println!("looping: {}", i);
 }
 ```
-You can also loop in steps similar to the C++ `i += 2` by using this syntax: `for i in (1..10).step_by(2)`, but how do you loop backward? I probably spoiled the fun as the answer is visible above, you create an iterator from a range by yet another trait called `Into` which is a reciprocal of `From` - in short it allows the programmer to specify legal conversions between types in Rust. So, we take a range of values, convert it into an iterator and call the `rev()` function on it and _voila_, we got our reverse loop: `for i in (1..10).into_iter().rev()`.
+You can also loop in steps similar to the C++ `i += 2` by using this syntax: `for i in (1..10).step_by(2)`, but how do you loop backward? I probably spoiled the fun as the answer is visible above, a range already implements the `Iterator` trait, and for other types you create an iterator from them by yet another trait called `Into` which is a reciprocal of `From` - in short it allows the programmer to specify legal conversions between types in Rust. So, we take a range of values, call the `rev()` function on it (provided by the `Iterator` trait) and _voila_, we got our reverse loop: `for i in (1..10).rev()`.
 
 Barring from some syntax differences, the program is quite similar to the original version, we use `as` instead of C-style (*unsafe*) casts and `static_cast<T>`s. This cast will of course detect any mismatch at compile time.
 
@@ -236,13 +236,13 @@ impl ops::DivAssign<f64> for Vec3 {
 
 First important thing to note is that Rust provides no constructor overloading and achieves similar goals with the *Builder Pattern*. [This pattern] is quite popular and has been with us for quite some time now and it neatly fits in the *assumed immutability* philosophy of Rust. So instead of providing an overloaded constructor for every type, you call the builder and chain functions like this:
 ```rust
-let vector: Vec3 = Vec3::with_values(1.0, 2.0, 3.0).frobnicate().build();
+let vector: Vec3 = Vec3::new(1.0, 2.0, 3.0).frobnicate().build();
 ```
 Quite simple, isn't it?
 
 And it removes much of the noise related to the class ([rule of the 5]? anyone?).
 
-However, we will go even simpler route an simply provide various constructor functions. Using builder here would be a pretty big overkill.
+However, we will go even simpler route an simply provide various constructor functions. Using builder here would be a pretty big overkill. Rust goes even further so that we don't need to provide a default constructor when we derive a `Default` trait. It manages all the initialization for us and does this properly.
 
 You may have noticed the `self` and `mut self` arguments to the functions of this class (yes I know, it is a *struct*) - these are the indicators that this is a *method* compared to ordinary *associated function* (you may know them as *static methods* from C++).
 
@@ -260,7 +260,6 @@ inline std::ostream& operator<<(std::ostream &out, const vec3 &v) {
 **Rust:**
 ```rust
 impl fmt::Display for Vec3 {
-    #[inline]
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{} {} {}", self.x, self.y, self.z)
     }
@@ -530,7 +529,7 @@ As of today, the subject of the error handling is so important, there is a whole
 [rayon]: https://docs.rs/rayon/1.5.0/rayon/
 [here]: https://www.reddit.com/r/rust/comments/lukgyi/c_to_rust_introduction_with_practical_raytracing/
 
-[repo]: https://github.com/JDuchniewicz/rustracing
+[repo]: https://github.com/JDuchniewicz/rustracing/tree/f290e44caaacb249c0fd6bd49a26ace4d8709370
 [this]: https://raytracing.github.io/images/img-1.01-first-ppm-image.png
 [PPM]: https://raytracing.github.io/books/RayTracingInOneWeekend.html#outputanimage/theppmimageformat
 [_Ray Tracing in One Weekend_]: https://raytracing.github.io/books/RayTracingInOneWeekend.html
