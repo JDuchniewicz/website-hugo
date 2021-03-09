@@ -185,7 +185,7 @@ using color = vec3;    // RGB color
 use std::fmt;
 use std::ops;
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, Default)]
 pub struct Vec3 {
     pub x: f64,
     pub y: f64,
@@ -196,24 +196,8 @@ pub use Vec3 as Point3;
 pub use Vec3 as Color;
 
 impl Vec3 {
-    pub fn new() -> Vec3 {
-        Vec3 {
-            x: 0.,
-            y: 0.,
-            z: 0.,
-        }
-    }
-
-    pub fn with_values(x: f64, y: f64, z: f64) -> Vec3 {
+    pub fn new(x: f64, y: f64, z: f64) -> Vec3 {
         Vec3 { x, y, z }
-    }
-
-    pub fn with_vec3(rhs: Vec3) -> Vec3 {
-        Vec3 {
-            x: rhs.x,
-            y: rhs.y,
-            z: rhs.z,
-        }
     }
 
     pub fn length(&self) -> f64 {
