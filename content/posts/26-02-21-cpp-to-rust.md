@@ -546,7 +546,7 @@ As of today, the subject of the error handling is so important, there is a whole
 [rayon]: https://docs.rs/rayon/1.5.0/rayon/
 [here]: https://www.reddit.com/r/rust/comments/lukgyi/c_to_rust_introduction_with_practical_raytracing/
 
-[repo]:https://github.com/JDuchniewicz/rustracin://github.com/JDuchniewicz/rustracing
+[repo]: https://github.com/JDuchniewicz/rustracing
 [this]: https://raytracing.github.io/images/img-1.01-first-ppm-image.png
 [PPM]: https://raytracing.github.io/books/RayTracingInOneWeekend.html#outputanimage/theppmimageformat
 [_Ray Tracing in One Weekend_]: https://raytracing.github.io/books/RayTracingInOneWeekend.html
