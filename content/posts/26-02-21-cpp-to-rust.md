@@ -79,7 +79,7 @@ fn main() {
     let image_width = 256;
     let image_height = 256;
 
-    println!("p3\n{} {}\n255", image_height, image_width);
+    println!("P3\n{} {}\n255", image_height, image_width);
 
     for j in (0..image_height).rev() {
         for i in 0..image_width {
