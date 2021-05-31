@@ -1,7 +1,7 @@
 +++
 title = "BIBoP 1 - Intro and Machine Learning"
 description = "LOLWUT"
-date = 2021-05-31T12:54:10+01:00
+date = 2021-05-31T11:54:10+01:00
 type = ["posts","post"]
 toc = true
 tags = ["bibop", "arduino", "health", "monitoring", "machine learning", "embedded"
