@@ -6,21 +6,26 @@ date = "2020-04-30"
 +++
 
 ## Hi there!
+{{< image src="/about_me.jpg" alt="Picture of me!" position="center" style="border-radius: 8px;" >}}
+
 My name is Jakub Duchniewicz and this is my personal space :) \
-I am currently pursuing MSc in Embedded Systems at University of Turku, Finland as a part of EIT Digital Programme.
+I am currently pursuing MSc in Embedded Systems at KTH Royal Academy, Sweden and University of Turku, Finland as a part of EIT Digital Programme. I am currently writing my thesis titled: "FPGA accelerated tcpdump using eBPF" with my current employer [Tietoevry].
 
 I have graduated from Warsaw University of Technology with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*.
 
-There will be (or already are) several posts dedicated to this topic: [Posts]. Feel free to comment on them, or drop me an email/DM me.
+There are already several posts dedicated to this topic: [Posts].
+
+Feel free to comment on them, or drop me an email/DM me.
 
 ## What's in here?
 On this website you can find some thoughts of mine on several topics ranging from:
 
-* Microcontrollers and FPGA's 
-* Game Engines 
+* Microcontrollers and FPGA's
 * Machine Learning
 * Linux and other OS's topics
 * Systems Programming
+* Game Engines
+* Keeb stuff - HHKB2 Workman user here :strong:
 
 Please feel free to reach out to me, or leave a comment, I am always eager to have a chat or give a helping hand!
 
@@ -50,10 +55,10 @@ Lately, I have been digging more into Machine Learning with [fastai], ultimately
 
 Moreover, I am intensively learning Rust, and I am engaged in development of Error handling guidelines, as well as, stabilizing some features related to it in the Rust language.
 
-I am an active developer of [PolyEngine], and if you would like to join us don't hesitate! 
+I am an active developer of [PolyEngine], and if you would like to join us don't hesitate!
 Currently it undergoes some restructurization and implementation of Editor and Vulkan rendering engine (we used OpenGL based one so far), so if you are specialized in either Qt or Vulkan -- we need you! (We welcome you anyway :heart:)
 
+[Tietoevry]: https://www.tietoevry.com/
 [PolyEngine]: https://github.com/PolyEngineTeam/PolyEngine/
 [Posts]: https://jduchniewicz.com/posts/
-[fastai]: https://course.fast.ai/
 [here]: https://jduchniewicz.com/FPGA-synth.pdf

@@ -61,6 +61,11 @@
         padding: 12px 0;
         text-decoration: none;
       }
+
+      a:hover,
+      a:focus {
+        color: #666;
+      }
     }
 
     &-day {
