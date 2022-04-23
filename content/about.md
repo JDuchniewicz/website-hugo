@@ -6,10 +6,10 @@ date = "2020-04-30"
 +++
 
 ## Hi there!
-{{< image src="/about_me.jpg" alt="Picture of me!" position="center" style="border-radius: 8px;" >}}
+{{< image src="/me.jpg" alt="Picture of me!" position="center" style="border-radius: 8px;" >}}
 
 My name is Jakub Duchniewicz and this is my personal space :) \
-I am currently pursuing MSc in Embedded Systems at KTH Royal Academy, Sweden and University of Turku, Finland as a part of EIT Digital Programme. I am currently writing my thesis titled: "FPGA accelerated tcpdump using eBPF" with my current employer [Tietoevry].
+I am currently pursuing MSc in Embedded Systems at KTH Royal Academy, Sweden and University of Turku, Finland as a part of EIT Digital Programme. I am currently writing my thesis titled: "FPGA accelerated tcpdump using eBPF" with my current employer [Tietoevry]. In my free time I am learning German and parenting a cute terrier dog Łajdak.
 
 I have graduated from Warsaw University of Technology with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*.
 
@@ -25,7 +25,7 @@ On this website you can find some thoughts of mine on several topics ranging fro
 * Linux and other OS's topics
 * Systems Programming
 * Game Engines
-* Keeb stuff - HHKB2 Workman user here :strong:
+* Keeb stuff - HHKB2 Workman user here :muscle:
 
 Please feel free to reach out to me, or leave a comment, I am always eager to have a chat or give a helping hand!
 
@@ -50,7 +50,10 @@ output through 1 pin Sigma-Delta DAC.
 
 **Keywords**: FPGA, Sound Synthesis, SoC, DMA, SVF
 
-### Little bit more
+### Current Interests
+At the moment I am mostly focusing on doing my thesis and learning how to manage and invest money in a smart way. I am also keenly learning German via podcasts (EasyGerman FTW) and while speaking with a native speaker.
+
+### Past Activities
 Lately, I have been digging more into Machine Learning with [fastai], ultimately wanting to deploy my own models on microcontrollers/FPGA's, so expect some content on that soon'ish.
 
 Moreover, I am intensively learning Rust, and I am engaged in development of Error handling guidelines, as well as, stabilizing some features related to it in the Rust language.
