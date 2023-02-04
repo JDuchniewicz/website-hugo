@@ -9,9 +9,9 @@ date = "2020-04-30"
 {{< image src="/me.jpg" alt="Picture of me!" position="center" style="border-radius: 8px;" >}}
 
 My name is Jakub Duchniewicz and this is my personal space :) \
-I am currently pursuing MSc in Embedded Systems at KTH Royal Academy, Sweden and University of Turku, Finland as a part of EIT Digital Programme. I am currently writing my thesis titled: "FPGA accelerated tcpdump using eBPF" with my current employer [Tietoevry]. In my free time I am learning German and parenting a cute terrier dog Łajdak.
+I have recently graduated with an MSc in Embedded Systems at KTH Royal Institute of Technology, Sweden and University of Turku, Finland as a part of EIT Digital Programme. Thesis titled: *"FPGA accelerated tcpdump using eBPF"* goes into the topic of hardware acceleration of packet capturing in embedded Linux system using an FPGA. It was a cooperative effort between KTH and my current employer [Tietoevry]. In my free time I am doing a ton of bouldering, learning hardware hacking, some reverse engineering and taking care of my cute humongous German Shepherd Bruno.
 
-I have graduated from Warsaw University of Technology with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*.
+I have also graduated from Warsaw University of Technology with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*.
 
 There are already several posts dedicated to this topic: [Posts].
 
@@ -25,9 +25,49 @@ On this website you can find some thoughts of mine on several topics ranging fro
 * Linux and other OS's topics
 * Systems Programming
 * Game Engines
+* Game Development
+* Lifestyle and travelling :surf:
 * Keeb stuff - HHKB2 Workman user here :muscle:
 
 Please feel free to reach out to me, or leave a comment, I am always eager to have a chat or give a helping hand!
+
+## MSc Thesis:
+### *"FPGA accelerated tcpdump using eBPF"*
+
+[PDF for viewing.]
+
+**Abstract**:
+With the rise of the Internet of Things and the proliferation of embedded
+devices equipped with an accelerator arose a need for eﬀicient resource
+utilization. Hardware acceleration is a complex topic that requires specialized
+domain knowledge about the platform and different trade-offs that have to be
+made, especially in the area of power consumption. Eﬀicient work offloading
+strives to reduce or at least maintain the total power consumption of the
+system. Offloading packet capturing is usually done in more powerful devices,
+hence scarce research is present concerning network packet acceleration in
+embedded devices.
+The thesis focuses on accelerating networking packets utilizing a Field
+Programmable Gate Array in an embedded Linux System. The solution is
+based on a custom Linux distribution assembled using the Buildroot tool,
+specially configured and patched Linux kernel, uboot bootloader, and the
+programmable logic for packet acceleration. The system is evaluated on
+a De0-Nano System on Chip development board through modifications to
+burst lengths, packet sizes, and programmable logic clock frequency. Metrics
+include packet capturing time, time per packet, and consumed power. Finally,
+the results are contrasted with baseline embedded Linux packet processing by
+inspection of a packet’s path through the kernel.
+Collected results provide a deeper understanding of the packet acceleration
+problem in embedded devices and the resultant system gives a solid starting
+point for possible extensions such as packet filtering. Key findings include
+an improvement in packet processing speed as the clock frequency and burst
+length are increased while maintaining power consumption. Additionally,
+the solution performs better when the packet sizes are above 64 bytes as the
+overhead of additional logic necessary for their processing is compensated.
+The project is also found to be significantly faster than regular in kernel
+processing with the caveat of providing just packet capturing whereas Linux
+contains a full network stack.
+
+**Keywords**: Field Programmable Gate Array, Acceleration, Networking, Embedded Linux
 
 ## BSc Thesis:
 ### *"FPGA based hardware accelerator for musical synthesis for Linux system"*
@@ -51,7 +91,7 @@ output through 1 pin Sigma-Delta DAC.
 **Keywords**: FPGA, Sound Synthesis, SoC, DMA, SVF
 
 ### Current Interests
-At the moment I am mostly focusing on doing my thesis and learning how to manage and invest money in a smart way. I am also keenly learning German via podcasts (EasyGerman FTW) and while speaking with a native speaker.
+Currently I am preparing for State of Open Con 23 :). I am also keenly learning German via podcasts (EasyGerman FTW) and while speaking with a native speaker.
 
 ### Past Activities
 Lately, I have been digging more into Machine Learning with [fastai], ultimately wanting to deploy my own models on microcontrollers/FPGA's, so expect some content on that soon'ish.
@@ -65,3 +105,4 @@ Currently it undergoes some restructurization and implementation of Editor and V
 [PolyEngine]: https://github.com/PolyEngineTeam/PolyEngine/
 [Posts]: https://jduchniewicz.com/posts/
 [here]: https://jduchniewicz.com/FPGA-synth.pdf
+[PDF for viewing.]: https://jduchniewicz.com/FPGA-capture.pdf
