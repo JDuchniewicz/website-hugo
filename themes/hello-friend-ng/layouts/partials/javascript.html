@@ -5,7 +5,8 @@
 {{ $navbar := resources.Get "js/scroll_navbar.js" }}
 {{ $progress := resources.Get "js/progress.js" }}
 {{ $toc := resources.Get "js/toc.js" }}
-{{ $secureJS := slice $main $menu $prism $theme $navbar $progress $toc | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ $mobile_scroll := resources.Get "js/mobile_scroll_top.js" }}
+{{ $secureJS := slice $main $menu $prism $theme $navbar $progress $toc $mobile_scroll | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
 {{- if .Site.GoogleAnalytics }}
