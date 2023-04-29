@@ -1,5 +1,5 @@
 // Arrow that scrolls to top on mobile devices
-var target = document.querySelector("post-title");
+var target = document.querySelector(".post-title");
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 var rootElement = document.documentElement;
@@ -23,6 +23,6 @@ function scrollToTop() {
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
 let observer = new IntersectionObserver(callback);
-if (isMobile()) {
+if (isMobile() && target) {
     observer.observe(target);
 }
