@@ -144,6 +144,9 @@ I hope this post will help you with choosing the proper layout, and if it is wor
 
 Btw. I changed the comment engine to [  utterances ] as it is more responsible in terms of privacy than disqus.
 
+Considering that you like what I'm doing and you would like to see more of it - consider buying me a [coffee] :coffee:
+[coffee]: https://www.buymeacoffee.com/jduchniewicz
+
 
 
 [original]: https://workmanlayout.org/

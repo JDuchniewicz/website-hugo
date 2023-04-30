@@ -5,13 +5,18 @@ date = "2020-04-30"
   name = "Jakub Duchniewicz"
 +++
 
-## Hi there!
-{{< image src="/me.jpg" alt="Picture of me!" position="center" style="border-radius: 8px;" >}}
+## [Hello there!](https://www.youtube.com/watch?v=rEq1Z0bjdwc)
+{{< image src="/me2_resized.jpg" alt="Picture of me!" position="center" style="border-radius: 8px; height=10%; width=10%;" >}}
 
 My name is Jakub Duchniewicz and this is my personal space :) \
-I have recently graduated with an MSc in Embedded Systems at KTH Royal Institute of Technology, Sweden and University of Turku, Finland as a part of EIT Digital Programme. Thesis titled: *"FPGA accelerated tcpdump using eBPF"* goes into the topic of hardware acceleration of packet capturing in embedded Linux system using an FPGA. It was a cooperative effort between KTH and my current employer [Tietoevry]. In my free time I am doing a ton of bouldering, learning hardware hacking, some reverse engineering and taking care of my cute humongous German Shepherd Bruno.
+I am currently working as a programmer at **[Tietoevry]** doing 5G L1 and L2 development for **Intel**. 
 
-I have also graduated from Warsaw University of Technology with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*.
+I have recently graduated with an MSc in Embedded Systems at KTH Royal Institute of Technology, Sweden and University of Turku, Finland as a part of EIT Digital Programme. Thesis titled: *"FPGA accelerated tcpdump using eBPF"* goes into the topic of hardware acceleration of packet capturing in embedded Linux system using an FPGA. It was a cooperative effort between KTH and [Tietoevry]. \
+In my free time I am doing a ton of bouldering, learning hardware hacking, some reverse engineering and taking care of my cute humongous German Shepherd Bruno.
+
+I have also graduated from Warsaw University of Technology with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*. 
+
+You can see both theses under the *Achievements* section below.
 
 There are already several posts dedicated to this topic: [Posts].
 
@@ -30,7 +35,29 @@ On this website you can find some thoughts of mine on several topics ranging fro
 * Keeb stuff - HHKB2 Workman user here :muscle:
 
 Please feel free to reach out to me, or leave a comment, I am always eager to have a chat or give a helping hand!
+Also, if you like what I do and you want more content, feel free to buy me a [coffee] :coffee:
 
+## Achievements
+---
+### Embedded Open Source Summit 
+
+### The Deluge
+
+### State of Open Con
+
+### '21 GSoC beagleboard.org - GPGPU using OpenGL ES on BBB
+
+
+## Projects
+---
+### Rustalizer
+
+
+### Polyengine
+
+
+## Academia
+---
 ## MSc Thesis:
 ### *"FPGA accelerated tcpdump using eBPF"*
 
@@ -90,19 +117,9 @@ output through 1 pin Sigma-Delta DAC.
 
 **Keywords**: FPGA, Sound Synthesis, SoC, DMA, SVF
 
-### Current Interests
-Currently I am preparing for State of Open Con 23 :). I am also keenly learning German via podcasts (EasyGerman FTW) and while speaking with a native speaker.
-
-### Past Activities
-Lately, I have been digging more into Machine Learning with [fastai], ultimately wanting to deploy my own models on microcontrollers/FPGA's, so expect some content on that soon'ish.
-
-Moreover, I am intensively learning Rust, and I am engaged in development of Error handling guidelines, as well as, stabilizing some features related to it in the Rust language.
-
-I am an active developer of [PolyEngine], and if you would like to join us don't hesitate!
-Currently it undergoes some restructurization and implementation of Editor and Vulkan rendering engine (we used OpenGL based one so far), so if you are specialized in either Qt or Vulkan -- we need you! (We welcome you anyway :heart:)
-
 [Tietoevry]: https://www.tietoevry.com/
 [PolyEngine]: https://github.com/PolyEngineTeam/PolyEngine/
 [Posts]: https://jduchniewicz.com/posts/
 [here]: https://jduchniewicz.com/FPGA-synth.pdf
 [PDF for viewing.]: https://jduchniewicz.com/FPGA-capture.pdf
+[coffee]: https://www.buymeacoffee.com/jduchniewicz

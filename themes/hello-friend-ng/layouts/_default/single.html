@@ -1,7 +1,7 @@
 {{ define "main" }}
     <main class="post">
 
-        <div class="post-info">
+        <div class="post-info" id="post-info">
             {{ if .IsTranslated }}
                 {{ i18n "postAvailable" }}
                 {{ range .Translations }}

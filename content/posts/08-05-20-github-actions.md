@@ -95,6 +95,8 @@ Probably the most used action is the `checkout` action which checks out your rep
 ## Conclusion
 While I covered some basic features, and some that I simply needed, your configuration will be probably much more complex. Thus, I recommend consulting the official docs (they present the basics pretty well, but obscure some details like `if` statements in steps) and/or this excellent [post series] by Edward Thomson, which dig deeper into this subject. I hope that now you have some knowledge about the amazing world of GitHub Actions and will automate your own repositories :)
 
+On closing words, if you like what I'm doing and you would like to see more of it - consider buying me a [coffee] :coffee:
+[coffee]: https://www.buymeacoffee.com/jduchniewicz
 [PolyEngine]: https://github.com/PolyEngineTeam/PolyEngine/
 [PolyDock]: https://github.com/PolyEngineTeam/PolyDock/
 [Act]: https://github.com/nektos/act

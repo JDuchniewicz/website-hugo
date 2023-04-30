@@ -92,6 +92,8 @@ Again, without the `hint.description` tag, they won't show up in the `aplay`'s l
 ## Conclusions
 Having read this post you will be able to create your own ALSA configuration for simultaenous capture and playback for both ALSA and PulseAudio. This is not the end of my ALSA adventures, but the next time I will write about it will be from the device driver perspective, so we will be looking at some kernel topics, such as DMA and timers. I hope you will find this post useful and educating :) I also hope to be posting some more in the upcoming weeks, as currently I have some free time due to current world situation. So stay productive and stay safe.
 
+As always, if you like what I'm doing and you would like to see more of it - consider buying me a [coffee] :coffee:
+[coffee]: https://www.buymeacoffee.com/jduchniewicz
 [cpal]: https://docs.rs/cpal/0.12.1/cpal/index.html
 [here]: https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Configuration
 [minimal configuration file]: https://ristovski.github.io/posts/master-alsa-config/

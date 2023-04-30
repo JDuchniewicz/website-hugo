@@ -524,6 +524,9 @@ Also, thank you kind reader for the patience to read this thing through. Don't h
 
 As of today, the subject of the error handling is so important, there is a whole [project group] in the Rust community, of which I am a proud member. Come over and chat with us if something is bothering you about the current state of error handling or you would like to get involved in the process.
 
+If you like what I'm doing and you would like to see more of it - consider buying me a [coffee] :coffee:
+[coffee]: https://www.buymeacoffee.com/jduchniewicz
+
 
 [optimization PR]: https://github.com/JDuchniewicz/rustracing/pull/1
 [rayon]: https://docs.rs/rayon/1.5.0/rayon/
