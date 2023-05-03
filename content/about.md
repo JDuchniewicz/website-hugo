@@ -9,14 +9,14 @@ date = "2020-04-30"
 {{< image src="/me2_resized.jpg" alt="Picture of me!" position="center" style="border-radius: 8px" >}}
 
 My name is **Jakub Duchniewicz** and this is my personal space :) \
-I am currently working as a programmer at **[Tietoevry]** doing 5G L1 and L2 development for **Intel**. 
+I am currently working as a programmer at **[Tietoevry]** doing 5G L1 and L2 development for an **unspecified client :smile:**.
 
 My skills include low-level programming in **C**, **C++** and **Rust**. Being proficient in hardware accelerators, such as **FPGA**s I happen to know some **VHDL** and **SystemVerilog**. Lastly, being a hardcore **gamejammer** I am familiar with the **Unity** engine and other popular tools of the trade.
-In my free time I am doing a ton of **bouldering**, learning **hardware hacking**, some **reverse engineering** and taking care of my cute humongous German Shepherd **Bruno**:w
+In my free time I am doing a ton of **bouldering**, learning **hardware hacking**, some **reverse engineering** and taking care of my cute humongous German Shepherd **Bruno**
 
-I have recently graduated with an MSc in **Embedded Systems** at **KTH Royal Institute of Technology**, Sweden and **University of Turku**, Finland as a part of EIT Digital Programme. Thesis titled: *"FPGA accelerated tcpdump using eBPF"* goes into the topic of hardware acceleration of packet capturing in embedded Linux system using an FPGA. It was a cooperative effort between KTH and [Tietoevry]. \
+I have recently graduated with an MSc in **Embedded Systems** at **KTH Royal Institute of Technology**, Sweden and **University of Turku**, Finland as a part of EIT Digital Programme. Thesis titled: *"FPGA accelerated tcpdump using eBPF"* goes into the topic of hardware acceleration of packet capturing in embedded Linux system using an FPGA. It was a cooperative effort between KTH and [Tietoevry].
 
-I have also graduated from **Warsaw University of Technology** with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*. 
+I have also graduated from **Warsaw University of Technology** with the highest degree for my thesis: *"FPGA based hardware accelerator for musical synthesis for Linux system"*.
 
 You can see both theses under the *Achievements* section below.
 
@@ -57,7 +57,7 @@ During this presentation, the topic of **hardware acceleration** using **FPGA**s
 
 The project was evaluated on a **De0-Nano System on Chip development board** through modifications to burst lengths, packet sizes, and programmable logic clock frequency.
 Metrics include packet capturing time, time per packet, and consumed power.
-Finally, the results were contrasted with baseline **embedded Linux** packet processing by inspection of a packet’s path through the kernel. 
+Finally, the results were contrasted with baseline **embedded Linux** packet processing by inspection of a packet’s path through the kernel.
 
 After the presentation, a lengthy discussion arose and interesting future ideas for the project were imagined. It can be viewed [online here].
 
