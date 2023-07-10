@@ -415,6 +415,8 @@ This was the first of posts describing my endeavours with BIBoP, with several mo
 
  As always, if you found anything unclear or want to provide feedback, reach out to me, be it below this post or personally :smile:.
 
+Also, if you like what I'm doing and you would like to see more of it - consider buying me a [coffee] :coffee:
+[coffee]: https://www.buymeacoffee.com/jduchniewicz
 [Envidrawer]: https://www.element14.com/community/community/design-challenges/1-meter-of-pi/blog/2021/01/06/envidrawer-final-post
 [official repository]: https://github.com/JDuchniewicz/BIBoP
 [official contest website]: https://www.element14.com/community/community/design-challenges/design-for-a-cause-2021

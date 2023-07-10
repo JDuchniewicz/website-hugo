@@ -65,6 +65,9 @@ I am gradually falling in love with Rust and will be trying some embedded soluti
 
 Thanks for reading!
 
+If you like what I'm doing and you would like to see more of it - consider buying me a [coffee] :coffee:
+[coffee]: https://www.buymeacoffee.com/jduchniewicz
+
 [this link]: https://jduchniewicz.com/FPGA-synth.pdf
 [already polluted]: https://www.visualcapitalist.com/wp-content/uploads/2019/04/data-generated-each-day-wide.html
 [black magic]: https://www.amazon.com/High-Speed-Digital-Design-Handbook/dp/0133957241
