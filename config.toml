@@ -124,7 +124,7 @@ disableHugoGeneratorInject = false
     url = "https://jduchniewicz.com/cv.pdf"
 
 [languages]
-  [languages.en]
+  [languages.en.params]
     subtitle  = "Personal space"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'

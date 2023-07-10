@@ -12,5 +12,3 @@ categories = [
   name = "Jakub Duchniewicz"
 +++
 
-
-[PolyEngine]: https://github.com/PolyEngineTeam/PolyEngine/
