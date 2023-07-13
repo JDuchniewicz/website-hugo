@@ -1,3 +1,4 @@
+/* This will contain cool polygon movement once I figure out how to code it nicely
 // Get the canvas element and its 2D context
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
@@ -167,3 +168,4 @@ window.addEventListener('mousemove', onMouseMove);
 function randomColor() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
+*/
