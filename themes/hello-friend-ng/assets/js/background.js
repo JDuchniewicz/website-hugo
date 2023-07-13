@@ -1,4 +1,4 @@
-// Cycle a gradient on background of the page
+/*// Cycle a gradient on background of the page
 var darkColors = new Array(
 [37,38,39], //#252627
 [43,48,58], //#2B303A
@@ -97,4 +97,4 @@ if (!isMobile() && !isPost) {
                         });
                     });
     themeObserver.observe(document.body, {attributes: true});
-}
+}*/
