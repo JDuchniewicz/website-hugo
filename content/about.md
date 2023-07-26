@@ -47,7 +47,7 @@ Please feel free to reach out to me, or leave a comment, I am always eager to ha
 ### Embedded Open Source Summit
 {{< image src="/EOSS_logo.png" alt="Embedded Open Source Summit 2023" position="center" style="border-radius: 8px;" >}}
 
-Me and **[Szymon Duchniewicz]** will be speaking at **Embedded Open Source Summit** on the topic of *[Porting an AI Powered Wearable Health Monitor to Zephyr on Open Hardware]*. We will go into the first iteration of our project on non-Zephyr OS (Arduino) and the present the challenges and shortcomings of that approach. Then we will show how te ported the solution to [QuickLogic EOS 3 platform] and run it on **[Zephyr OS]**. We will also comment on how we designed the entire system, including the **Machine Learning** model for Blood Pressure inference (whose breakdown you can see in [this blog post]). \
+Me and **[Szymon Duchniewicz]** spoke at **Embedded Open Source Summit** on the topic of *[Porting an AI Powered Wearable Health Monitor to Zephyr on Open Hardware]*. You may refer to [the video] and [the blog post] for more details. In short we briefly explained the first iteration of our project on non-Zephyr OS (Arduino) and the presented the challenges and shortcomings of that approach. Then showed how we ported the solution to [QuickLogic EOS S3 platform] and ran it on **[Zephyr OS]**. We also commented on how we designed the entire system, including the **Machine Learning** model for Blood Pressure inference (whose breakdown you can see in [this blog post]). The entire presentation featured a plethora of tips regarding porting Zephyr to a new platform (as it turned out the EOS S3 had *really* basic Zephyr support.\
 **Skills:** `C`, `Zephyr`, `Machine Learning`, `Hardware acceleration`, `3D printing`
 
 ### State of Open Con
@@ -188,8 +188,10 @@ output through 1 pin Sigma-Delta DAC.
 [Szymon Duchniewicz]: https://www.linkedin.com/in/szymon-duch/
 [Szymon]: https://www.linkedin.com/in/szymon-duch/
 [Porting an AI Powered Wearable Health Monitor to Zephyr on Open Hardware]: https://sched.co/1LcM4
+[the video]: https://www.youtube.com/watch?v=fBMeNOOghD4&feature=youtu.be
 [EOSS23 talk]: https://sched.co/1LcM4
-[Quicklogic EOS3 platform]: https://www.mouser.pl/new/sparkfun/sparkfun-quicklogic-thing-plus-eos-s3/
+[QuickLogic EOS S3 platform]: https://www.mouser.pl/new/sparkfun/sparkfun-quicklogic-thing-plus-eos-s3/
+[the blog post]: https://jduchniewicz.com/posts/2023/07/embedded-open-source-summit-2023/
 [Zephyr OS]: https://www.zephyrproject.org/
 [this blog post]: https://jduchniewicz.com/posts/2021/05/bibop-1-intro-and-machine-learning/
 [links]: http://i0.kym-cdn.com/photos/images/facebook/001/137/217/88b.png
