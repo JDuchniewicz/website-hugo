@@ -11,3 +11,14 @@ img.center:active {
     position: relative; // non-ideal, could have more flexibility here
 }
 // TODO: click to zoom click to zoom out and different zoom values?
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-container img {
+  max-width: 30%;
+  height: auto;
+  object-fit: contain;
+}
