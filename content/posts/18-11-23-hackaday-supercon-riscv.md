@@ -13,7 +13,7 @@ categories = [
   name = "Jakub Duchniewicz"
 +++
 
-Who would have thought that after the ACL injury that I suffered skiing in February I would be able to go (twice!) all the way to California to surf and attend/speak at several conferences there. As usual, my partner in crime is **[Szymon]** who, despite finishing his last year of masters at UCL was able to keep me company. *(For anyone interested, I was at the [Game Developers Conference] in San Francisco in March)*
+Who would have thought that after the ACL injury that I suffered skiing in February I would be able to go (twice!) all the way to California to surf and attend/speak at several conferences there. As usual, my partner in crime is **[Szymon]** who, despite being in the final year of his master's degree at UCL was able to keep me company. *(For anyone interested, I was at the [Game Developers Conference] in San Francisco in March)*
 
 In this blog post you will get a glimpse of what all the conferences were about and what are latest market trends and concerns related to today's geopolitical and economic situation.
 
