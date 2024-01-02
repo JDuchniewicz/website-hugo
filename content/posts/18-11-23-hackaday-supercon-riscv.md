@@ -41,7 +41,7 @@ After our brief respite in Encinitas, CA, (Tony Hawk lives there :grin:) where w
 
 It was also my first conference with a non-conventional badge, which instead of being a paper or plastic rectangle was a full-blown **[Vectorscope]**! My amazement had no boundaries when I learned that during the 3-day conference we could hack and tinker with it and we finally presented it at the **[closing gala]** where we almost won in our category (losing only to Pluto which apparently regained its status of a planet :zany_face:
 
-Even though the badge was initially slightly unstable (both the software and hardware had been made by the folks at **[Hackaday]**!), people created **AMAZING** **[creations using it]**, think **DOOM on Vectroscope**, **MPEG-1 video player** and others!
+Even though the badge was initially slightly unstable (both the software and hardware had been made by the folks at **[Hackaday]**!), people created **AMAZING** **[creations using it]**, think **DOOM on Vectroscope**, **[MPEG-1 video player]** and others!
 
 **[Our game]** was quite simple yet fun to hack around and tinker with in the corridors and workbenches of the conference. We added a parallax background (scrolling behind the main scene), some simple controls and game loop. Oh and we also managed to play some audio :smile: In fact, this reminded me that I need to resurrect my GameBoy game porting and design side project!
 
@@ -110,6 +110,7 @@ Stay tuned for some goodies from **[Sticky Piston Studios]** and if you still ha
 [Hackaday]: https://hackaday.com/
 [creations using it]: https://hackaday.com/2023/11/15/a-look-at-all-the-badge-hacks-of-supercon-2023/
 [Our game]: https://youtu.be/11Js0cOif4c?t=2540
+[MPEG-1 video player]: https://github.com/unwiredben/vector-video
 
 [RISC-V Summit]: https://events.linuxfoundation.org/riscv-summit/
 [beagleboard.org]: https://www.beagleboard.org/
