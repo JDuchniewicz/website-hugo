@@ -65,7 +65,7 @@ After some more assembly:
 
 And finally the classic blinky!
 
-{{< video url="https://youtube.com/shorts/TiEBmr2SlWo?feature=share" >}}
+{{< video src="https://www.youtube.com/embed/TiEBmr2SlWo" title="ZLED matrix part 1: Blinking the prototype" >}}
 
 
 ## ESP32C6
