@@ -75,10 +75,15 @@
 
     .tag {
       margin-right: .5em;
+      display: inline-block;
 
       &::before {
         content: "#"
       }
+    }
+
+    .tagHolder {
+        white-space: normal;
     }
 
     .feather {
