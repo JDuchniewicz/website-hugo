@@ -56,10 +56,17 @@ The exact steps of connecting and powering the LED matrix are coming soon and fo
   {{< image src="/zledframe/proto3.jpg" alt="Something assembled." position="center" style="border-radius: 8px;" >}}
 </div>
 
+After some more assembly:
+
 <div class="image-container">
   {{< image src="/zledframe/proto4.jpg" alt="All soldered." position="center" style="border-radius: 8px;" >}}
   {{< image src="/zledframe/proto5.jpg" alt="SHINY!" position="center" style="border-radius: 8px;" >}}
 </div>
+
+And finally the classic blinky!
+
+{{< video url="https://youtube.com/shorts/TiEBmr2SlWo?feature=share" >}}
+
 
 ## ESP32C6
 
