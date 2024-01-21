@@ -9,7 +9,7 @@ date = "2020-04-30"
 {{< image src="/me2_resized.jpg" alt="Picture of me!" position="center" style="border-radius: 8px" >}}
 
 My name is **Jakub Duchniewicz** and this is my personal space :) \
-I am currently working as a programmer at **[Tietoevry]** doing 5G L1 and L2 development for an **unspecified client :smile:**.
+I am currently working as a programmer at **[Tietoevry]** doing 5G NR L1 development from the Modem UE side on a custom ASIC for an **Unspecified Client**. Also, I am a co-founder of **[Sticky Piston Studios]** - a jack-of-all-trades company where **we make any advanced tech tick**!
 
 My skills include low-level programming in **C**, **C++** and **Rust**. Being proficient in hardware accelerators, such as **FPGA**s I happen to know some **VHDL** and **SystemVerilog**. Lastly, being a hardcore **gamejammer** I am familiar with the **Unity** engine and other popular tools of the trade.
 In my free time I am doing a ton of **bouldering**, learning **hardware hacking**, some **reverse engineering** and taking care of my cute humongous German Shepherd **Bruno**
@@ -44,6 +44,11 @@ Please feel free to reach out to me, or leave a comment, I am always eager to ha
 
 ## Achievements
 ---
+### Hackaday Supercon
+{{< image src="/Hackadaysupercon_logo.jpg" alt="Hackaday Supercon" position="center" style="border-radius: 8px;" >}}
+
+This is the second time we spoke on the topic of *[Porting an AI Powered Wearable Health Monitor to Zephyr on Open Hardware]*. See below for details!
+
 ### Embedded Open Source Summit
 {{< image src="/EOSS_logo.png" alt="Embedded Open Source Summit 2023" position="center" style="border-radius: 8px;" >}}
 
@@ -66,7 +71,7 @@ After the presentation, a lengthy discussion arose and interesting future ideas 
 ### The Deluge
 {{< image src="/deluge.png" alt="The Deluge" position="center" style="border-radius: 8px;" >}}
 
-My name is Jakub Duchniewicz and welcome to the **Sticky Piston Studios**!
+My name is Jakub Duchniewicz and welcome to the **[Sticky Piston Studios]**!
 
 I have been game jamming since 2016 and when in 2019 me and **[Mateusz Szymoński]** have jammed for the first time - **[Eternal Feud]** (a game where you shoot at each other with bleating sheep) was born. Unfortunately in 2020 Covid struck and all on-site jams were canceled.
 
@@ -209,3 +214,4 @@ output through 1 pin Sigma-Delta DAC.
 [beagleboard.org]: https://beagleboard.org/
 [this is unacceptable]: https://www.youtube.com/watch?v=Q-WHRJPlL5g
 [this project aims to change that]: https://github.com/JDuchniewicz/GPGPU-with-GLES
+[Sticky Piston Studios]: https://stickypistonstudios.com/
