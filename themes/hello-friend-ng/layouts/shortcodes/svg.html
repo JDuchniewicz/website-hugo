@@ -1,0 +1,22 @@
+<!-- layouts/shortcodes/svg.html -->
+{{$path := .Get "path"}}
+{{$width := .Get "width"}}
+{{$height := .Get "height"}}
+
+{{$svgContent := readFile ($path)}}
+
+{{$firstWidthMatch := index (findRE "(?i)width=\"([^\"]*)\"" $svgContent) 0}}
+{{$firstHeightMatch := index (findRE "(?i)height=\"([^\"]*)\"" $svgContent) 0}}
+
+{{ if and $width $firstWidthMatch }}
+    {{$svgContent = replaceRE $firstWidthMatch (printf "width=\"%s\"" $width) $svgContent}}
+{{ end }}
+
+{{ if and $height $firstHeightMatch }}
+    {{$svgContent = replaceRE $firstHeightMatch (printf "height=\"%s\"" $height) $svgContent}}
+{{ end }}
+
+<span style="display: flex; justify-content: center; align-items: center;">
+    {{ $svgContent | safeHTML }}
+</span>
+
