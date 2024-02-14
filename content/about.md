@@ -8,7 +8,8 @@ date = "2020-04-30"
 ## [Hello there!](https://www.youtube.com/watch?v=rEq1Z0bjdwc)
 {{< image src="/me2_resized.jpg" alt="Picture of me!" position="center" style="border-radius: 8px" >}}
 
-My name is **Jakub Duchniewicz** and this is my personal space :) \
+My name is **Jakub Duchniewicz** and this is my personal space :grin:
+
 I am currently working as a programmer at **[Tietoevry]** doing 5G NR L1 development from the Modem UE side on a custom ASIC for an **Unspecified Client**. Also, I am a co-founder of **[Sticky Piston Studios]** - a jack-of-all-trades company where **we make any advanced tech tick**!
 
 My skills include low-level programming in **C**, **C++** and **Rust**. Being proficient in hardware accelerators, such as **FPGA**s I happen to know some **VHDL** and **SystemVerilog**. Lastly, being a hardcore **gamejammer** I am familiar with the **Unity** engine and other popular tools of the trade.
@@ -30,20 +31,26 @@ You can see both theses under the *Achievements* section below.
 ---
 On this website you can find some thoughts of mine on several topics ranging from:
 
+* Zephyr, Linux and other OS's
 * Microcontrollers and FPGA's
-* Machine Learning
-* Linux and other OS's topics
+* Lifestyle and travelling :ocean:
+* Hardware hacking and retro consoles
 * Systems Programming
-* Game Engines
-* Game Development
-* Lifestyle and travelling :water_wave:
+* Game Engines and Game Development
 * Keeb stuff - HHKB2 Workman user here :muscle:
+* Machine Learning
 
 Please feel free to reach out to me, or leave a comment, I am always eager to have a chat or give a helping hand!
 *Also, if you like what I do and you want more content, feel free to buy me a [coffee] :coffee:*
 
 ## Achievements
 ---
+### FOSDEM 2024
+{{< svg path="static/fosdem_logo.svg" width="30%" height="30%" >}}
+
+At **[FOSDEM]** 2024, I [presented my] and **[Tietoevry]**'s role and experience in revolutionizing the **5G** networks via adoption of **ORAN** or projects that implement it, such as **Intel FlexRAN** that I had pleasure developing. The core message of my talk was the necessity for a *solid open-source foundation at the lowest layer of the telecom industry's processing chain*. I also discussed the importance of opening up the ecosystem in the context of **5G** and shed some light on the intricate structure of the network, especially how the **[L1]** works.
+**Skills:** `C`, `5G`, `Radio Networks`, `L1`
+
 ### Hackaday Supercon
 {{< image src="/Hackadaysupercon_logo.jpg" alt="Hackaday Supercon" position="center" style="border-radius: 8px;" >}}
 
@@ -215,3 +222,7 @@ output through 1 pin Sigma-Delta DAC.
 [this is unacceptable]: https://www.youtube.com/watch?v=Q-WHRJPlL5g
 [this project aims to change that]: https://github.com/JDuchniewicz/GPGPU-with-GLES
 [Sticky Piston Studios]: https://stickypistonstudios.com/
+[presented my]: https://fosdem.org/2024/schedule/event/fosdem-2024-3128-openran-open-source-the-cool-kids-of-telecom-shaking-up-5g-lte-networks/
+[FOSDEM]: https://fosdem.org/2024/
+[Tietoevry]: https://www.tietoevry.com/
+[L1]:https://www.sharetechnote.com/html/5G/5G_RadioProtocolStackArchitecture.html
