@@ -15,7 +15,7 @@ categories = [
 
 Winter is the time for long, cozy evenings, catching up with your favorite games, TV series or books and maybe even some snow (**looking at you Warsaw 2024** :eyes:). For me it turned out to also be a stimuli to **embrace my inner maker/hacker spirit** and do more of the stuff that requires soldering/prototyping and, in general, making stuff. Last year's [Hackaday Supercon] inspired me not to wait for ages until my skillset is complete and only then attempt to build an *opus magnum* but rather *start now, smaller, gradually building up*. Also, I thought that maybe it is worth putting my skills to use in **some down-to-earth projects** that can have **real** impact on my everyday life and **will stick around for years to come**. This is accompanied by mine and other members of [Sticky Piston Studios] mindset of embracing the technology no matter its branch - see our [Sticky Web Platform] where we keep on lowering the entry bar of deploying your own websites and services. (**shameless marketing** :smile:)
 
-{{< image src="/zledframe/sunset.jpg" alt="Gorgeous sunset in Bad Gastein." position="center" style="border-radius: 8px;" >}}
+{{< image src="/zledframe/1/sunset.jpg" alt="Gorgeous sunset in Bad Gastein." position="center" style="border-radius: 8px;" >}}
 
 Thus, after thinking what project would I really like to have around that would be a base for my further reverse-engineering/retro-gaming efforts, I came up with the **LED-frame** concept that has already had several previous renditions, like [Raspberry-Pi Frame], [or another similar one]. Since in previous attempts some things were left out and, to my knowledge, none of previous efforts utilized [Zephyr] and less powerful MCUs like [ESP32], I decided to share my work on this project here, and maybe on some other social media platforms (not really an avid user of any of them). Of course, all of the project will be shared on my [GitHub] as I live by the rules of **Free Open Source Software (and hardware)**, in fact I am travelling to this year's [FOSDEM] so expect some updates from there too!
 
@@ -51,16 +51,16 @@ So, how to quickly ascertain that an idea is tangible and can be realized? By **
 The exact steps of connecting and powering the LED matrix are coming soon and for now please accept some teasers!
 
 <div class="image-container">
-  {{< image src="/zledframe/proto1.jpg" alt="Wiring up the ESP32" position="center" style="border-radius: 8px;" >}}
-  {{< image src="/zledframe/proto2.jpg" alt="First cuts." position="center" style="border-radius: 8px;" >}}
-  {{< image src="/zledframe/proto3.jpg" alt="Something assembled." position="center" style="border-radius: 8px;" >}}
+  {{< image src="/zledframe/1/proto1.jpg" alt="Wiring up the ESP32" position="center" style="border-radius: 8px;" >}}
+  {{< image src="/zledframe/1/proto2.jpg" alt="First cuts." position="center" style="border-radius: 8px;" >}}
+  {{< image src="/zledframe/1/proto3.jpg" alt="Something assembled." position="center" style="border-radius: 8px;" >}}
 </div>
 
 After some more assembly:
 
 <div class="image-container">
-  {{< image src="/zledframe/proto4.jpg" alt="All soldered." position="center" style="border-radius: 8px;" >}}
-  {{< image src="/zledframe/proto5.jpg" alt="SHINY!" position="center" style="border-radius: 8px;" >}}
+  {{< image src="/zledframe/1/proto4.jpg" alt="All soldered." position="center" style="border-radius: 8px;" >}}
+  {{< image src="/zledframe/1/proto5.jpg" alt="SHINY!" position="center" style="border-radius: 8px;" >}}
 </div>
 
 And finally the classic blinky!
@@ -78,7 +78,7 @@ As usual, I hope you gained something from this post and maybe will be motivated
 
 Leaving you with beautiful Austrian Alp view :grin:
 
-{{< image src="/zledframe/alps_panorama.jpg" alt="Alps panorama." position="center" style="border-radius: 8px;" >}}
+{{< image src="/zledframe/1/alps_panorama.jpg" alt="Alps panorama." position="center" style="border-radius: 8px;" >}}
 
 
 [Hackaday Supercon]: https://hackaday.io/superconference/
