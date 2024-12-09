@@ -11,7 +11,6 @@ PygmentsStyle = "monokai"
 rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
-googleAnalytics = "G-P8QYB9KYCF"
 disqusShortname = "jduchniewicz-com"
 
 archetypeDir = "archetypes"
@@ -37,9 +36,6 @@ disableHugoGeneratorInject = false
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
-[author]
-  name = "Jakub Duchniewicz"
-
 [markup]
     defaultMarkdownHandler = "goldmark"
     [markup.goldmark]
@@ -54,6 +50,8 @@ disableHugoGeneratorInject = false
   category = "categories"
 
 [params]
+  googleAnalytics = "G-P8QYB9KYCF"
+
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
@@ -87,6 +85,10 @@ disableHugoGeneratorInject = false
   defaultTheme = "dark"
   themeColorDark = "#252627"
   themeColorLight = "#fafafa"
+
+  [params.author]
+    name = "Jakub Duchniewicz"
+
 
   # Colors for favicons
   [params.favicon.color]

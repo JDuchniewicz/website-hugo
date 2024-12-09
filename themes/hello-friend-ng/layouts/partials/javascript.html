@@ -11,7 +11,7 @@
 {{ $secureJS := slice $main $menu $prism $theme $navbar $progress $toc $mobile_scroll $background $landing | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
-{{- if .Site.GoogleAnalytics }}
+{{- if .Site.Params.GoogleAnalytics }}
     {{ template "_internal/google_analytics.html" . }}
 {{- end}}
 
