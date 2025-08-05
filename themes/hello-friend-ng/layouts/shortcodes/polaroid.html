@@ -1,0 +1,14 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "Photo" -}}
+{{- $caption := .Get "caption" | default "Hi! I’m Jakub 👋" -}}
+{{- $max := .Get "max" | default "280px" -}}
+<figure style="max-width:{{ $max }}; margin:0 auto; text-align:center;">
+      <img src="{{ $src }}" alt="{{ $alt }}"
+                                   style="width:100%; display:block; border-radius:10px 10px 6px 6px;">
+        <figcaption style="font-size:0.95rem; padding:8px 10px 10px; background:#fff;
+                                  border:1px solid rgba(0,0,0,.08); border-top:0; border-radius:0 0 12px 12px;
+                                         box-shadow:0 6px 18px rgba(0,0,0,.10);">
+                {{ $caption }}
+                  </figcaption>
+</figure>
+
