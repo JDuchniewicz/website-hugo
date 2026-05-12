@@ -45,6 +45,12 @@ Please feel free to reach out to me, or leave a comment, I am always eager to ha
 
 ## Story
 ---
+### Everything Open 2026
+{{< image src="/about_res/everything_open26.png" alt="Everything Open 2026" position="center" style="border-radius: 8px;" >}}
+**Everything Open 2026** happened in Canberra, Australia just after my breathtaking trip to Tasmania. At this conference I met a lot of Down Under's developers and learned that a big part of modern world's technology is owed to these folks. My talk was on **[Pill Engine]**, **[PolyEngine]** and game engines in general. I covered the differences between **OOP** and **ECS** and why you should write data-oriented code. I also talked about achieving efficient hot-reloading that was recently implemented in **[Pill Engine]**.
+
+**Skills:** `Rust`, `Hot Reloading`, `Game Engines`, `ECS`
+
 ### Slavic Game Jam 2025
 {{< image src="/about_res/slavic_logo25.png" alt="Slavic Game Jam 2025" position="center" style="border-radius: 8px;" >}}
 **SGJ25** was the fourth time I participated in this Game Jam, this constitutes a tradition! Being something above 15th game jam, I have ever attended - this time I focused mostly on extending the **[Pill Engine]** with networking capabilities using `renet` Rust crate. Because writing proper networking is *hard* the game was created just in the last 6 hours of the gamejam! It is called **[Tiny Trucks]** and is all about drifting your own tiny truck with other players!
