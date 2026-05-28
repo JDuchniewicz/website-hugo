@@ -1,0 +1,32 @@
+{{ define "main" }}
+<main class="jk-page jk-page-narrow jk-notes-page">
+  <header class="jk-page-header">
+    <p class="jk-kicker">lab notebook</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="jk-page-subtitle">{{ . }}</p>{{ end }}
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Pages }}
+  {{ $pages := .Pages.ByDate.Reverse }}
+  <div class="jk-chrono-list">
+    {{ range $pages.GroupByDate "2006" }}
+      <h2 class="jk-year">{{ .Key }}</h2>
+      {{ range .Pages }}
+      <a class="jk-entry" href="{{ .RelPermalink }}">
+        <time class="jk-entry-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+        <div class="jk-entry-thumb"><span>note</span></div>
+        <div class="jk-entry-body">
+          <div class="jk-entry-meta">{{ with .ReadingTime }}{{ . }} min read{{ end }}</div>
+          <h2>{{ .Title }}</h2>
+          <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 170 }}{{ end }}</p>
+        </div>
+      </a>
+      {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+</main>
+{{ end }}

@@ -1,0 +1,21 @@
+{{ $main := resources.Get "js/main.js" }}
+{{ $menu := resources.Get "js/menu.js" }}
+{{ $prism := resources.Get "js/prism.js" }}
+{{ $theme := resources.Get "js/theme.js" }}
+{{ $navbar := resources.Get "js/scroll_navbar.js" }}
+{{ $progress := resources.Get "js/progress.js" }}
+{{ $toc := resources.Get "js/toc.js" }}
+{{ $mobile_scroll := resources.Get "js/mobile_scroll_top.js" }}
+{{/* Deliberately omit the theme background.js gradient cycler: it flickers and affects all non-post pages. */}}
+{{ $secureJS := slice $main $menu $prism $theme $navbar $progress $toc $mobile_scroll | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+
+{{- if .Site.Params.GoogleAnalytics }}
+    {{ template "_internal/google_analytics.html" . }}
+{{- end}}
+
+{{ range $val := $.Site.Params.customJS }}
+    {{ if gt (len $val) 0 }}
+        <script src="{{ $val }}"></script>
+    {{ end }}
+{{ end }}

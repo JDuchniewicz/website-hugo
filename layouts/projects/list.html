@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main class="jk-page jk-projects-page">
+  <header class="jk-page-header">
+    <p class="jk-kicker">portfolio index</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="jk-page-subtitle">{{ . }}</p>{{ end }}
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</main>
+{{ end }}

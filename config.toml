@@ -35,6 +35,7 @@ disableHugoGeneratorInject = false
 
 [permalinks]
   posts = "/posts/:year/:month/:title/"
+  notes = "/notes/:year/:month/:title/"
 
 [markup]
     defaultMarkdownHandler = "goldmark"
@@ -58,11 +59,11 @@ disableHugoGeneratorInject = false
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  description = "Nice theme for homepages and blogs"
+  description = "Embedded systems, Rust, FPGA, telecom and game-tech notes by Jakub Duchniewicz"
   keywords = ""
   images = [""]
 
-  homeSubtitle = "Little bits of this, litte bytes of that."
+  homeSubtitle = "Embedded systems, Rust, FPGA, telecom and game-tech notes."
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = ""
@@ -133,10 +134,37 @@ disableHugoGeneratorInject = false
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name       = "About Me"
-    url        = "about/"
+    identifier = "projects"
+    name       = "Projects"
+    url        = "/projects/"
+    weight     = 10
+
+  [[menu.main]]
+    identifier = "talks"
+    name       = "Talks"
+    url        = "/talks/"
+    weight     = 20
+
   [[menu.main]]
     identifier = "posts"
-    name       = "Posts"
-    url        = "posts/"
+    name       = "Writing"
+    url        = "/posts/"
+    weight     = 30
+
+  [[menu.main]]
+    identifier = "notes"
+    name       = "Notes"
+    url        = "/notes/"
+    weight     = 40
+
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about/"
+    weight     = 50
+
+  [[menu.main]]
+    identifier = "now"
+    name       = "Now"
+    url        = "/now/"
+    weight     = 60

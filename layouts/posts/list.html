@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ $covers := dict
+  "05-31-24-eoss-2024-lfone" "/eoss_lfone/me_seattle.jpeg"
+  "07-02-24-fossdem-24" "/fosdem24/brussels_1.jpeg"
+  "10-07-23-eoss" "/eoss23/wetalking.jpg"
+  "17-02-21-workman" "/workman/workman.png"
+  "18-11-23-hackaday-supercon-riscv" "/caliv2/encinitassunset.jpg"
+  "20-01-24-zled-frame-part1" "/zledframe/1/sunset.jpg"
+  "20-05-23-digital-dragons" "/digitaldragons/hackyeah22win.jpg"
+  "26-02-21-cpp-to-rust" "/raytracing/image.png"
+  "27-03-24-zled-frame-part2" "/zledframe/2/sunset.jpeg"
+  "31-05-21-bibop_1_Intro_ML" "/bibop/case.png"
+}}
+<main class="jk-writing-page">
+  <header class="jk-page-header">
+    <p class="jk-kicker">writing</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="jk-page-subtitle">{{ . }}</p>{{ else }}<p class="jk-page-subtitle">Longer technical write-ups, conference reports and project stories, grouped chronologically.</p>{{ end }}
+  </header>
+
+  {{ with .Content }}<div class="post-content">{{ . }}</div>{{ end }}
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  <div class="jk-chrono-list">
+    {{ range $pages.GroupByDate "2006" }}
+      <h2 class="jk-year">{{ .Key }}</h2>
+      {{ range .Pages }}
+        {{ $cover := index $covers .File.BaseFileName }}
+        <a class="jk-entry" href="{{ .RelPermalink }}">
+          <time class="jk-entry-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+          <div class="jk-entry-thumb">
+            {{ with $cover }}<img src="{{ . | relURL }}" alt="" loading="lazy" onerror="this.remove()">{{ else }}<span>{{ $.Title }}</span>{{ end }}
+          </div>
+          <div class="jk-entry-body">
+            <div class="jk-entry-meta">{{ with .ReadingTime }}{{ . }} min read{{ end }}</div>
+            <h2>{{ .Title }}</h2>
+            <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 170 }}{{ end }}</p>
+          </div>
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+</main>
+{{ end }}

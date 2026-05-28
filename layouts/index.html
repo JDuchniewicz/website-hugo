@@ -1,0 +1,132 @@
+{{ define "main" }}
+<main class="jk-home" aria-role="main">
+  <section class="jk-home-hero" aria-labelledby="home-title">
+    <div class="jk-hero-copy">
+      <p class="jk-kicker">embedded · telecom · rust · fpga · game-dev</p>
+      <h1 id="home-title">Jakub Duchniewicz</h1>
+      <p class="jk-lede">
+        I build systems close to the metal: embedded software, 5G/L1 work, Rust tooling,
+        FPGA experiments, Zephyr devices and game-engine prototypes.
+      </p>
+      <div class="jk-actions" aria-label="Primary links">
+        <a class="jk-button jk-button-primary" href="{{ "/projects/" | relURL }}">Projects</a>
+        <a class="jk-button" href="{{ "/posts/" | relURL }}">Writing</a>
+        <a class="jk-button" href="{{ "/talks/" | relURL }}">Talks</a>
+      </div>
+    </div>
+
+    <aside class="jk-focus-card" aria-label="Current focus snapshot">
+      <div class="jk-focus-card__top">current focus</div>
+      <pre><code>systems  embedded · linux · zephyr · seL4
+radio    5G NR L1 · Open RAN · FlexRAN
+rust     engines · tools · FFI · hot reload
+hw       FPGA · RISC-V · cursed prototypes
+site     rebuilding the lab notebook</code></pre>
+    </aside>
+  </section>
+
+  <section class="jk-section" aria-labelledby="featured-work">
+    <div class="jk-section-heading">
+      <div>
+        <p class="jk-kicker">selected work</p>
+        <h2 id="featured-work">Hardware/software boundary stuff</h2>
+      </div>
+      <a class="jk-mini-link" href="{{ "/projects/" | relURL }}">all projects →</a>
+    </div>
+
+    <div class="jk-feature-grid">
+      <article class="jk-card">
+        <div class="jk-card-media">
+          <img src="{{ "/about_res/zephyr.jpeg" | relURL }}" alt="ZLED Frame / Zephyr" loading="lazy" onerror="this.remove()">
+          <span>2024</span>
+        </div>
+        <div class="jk-card-topline">Zephyr · ESP32 · LEDs</div>
+        <h3>ZLED Frame</h3>
+        <p>Wi‑Fi controlled NeoPixel art frame: CAD, enclosure, firmware, HTTP image upload and Zephyr driver work.</p>
+        <div class="jk-card-links">
+          <a href="{{ "/projects/#zled-frame" | relURL }}">Project</a>
+          <a href="{{ relref . "/posts/20-01-24-zled-frame-part1.md" }}">Part 1</a>
+          <a href="{{ relref . "/posts/27-03-24-zled-frame-part2.md" }}">Part 2</a>
+        </div>
+      </article>
+
+      <article class="jk-card">
+        <div class="jk-card-media">
+          <img src="{{ "/bibop/case.png" | relURL }}" alt="BIBoP wearable casing" loading="lazy" onerror="this.remove()">
+          <span>2023</span>
+        </div>
+        <div class="jk-card-topline">Zephyr · wearable · ML</div>
+        <h3>BIBoP / AI wearable</h3>
+        <p>Open-hardware wearable health-monitor work, later used as a conference thread around Zephyr and embedded ML.</p>
+        <div class="jk-card-links">
+          <a href="{{ "/projects/#bibop" | relURL }}">Project</a>
+          <a href="{{ relref . "/posts/31-05-21-bibop_1_Intro_ML.md" }}">Intro</a>
+          <a href="{{ relref . "/posts/10-07-23-eoss.md" }}">EOSS</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ if gt (len $posts) 0 }}
+  <section class="jk-section" aria-labelledby="latest-writing">
+    <div class="jk-section-heading">
+      <div>
+        <p class="jk-kicker">latest</p>
+        <h2 id="latest-writing">Writing</h2>
+      </div>
+      <a class="jk-mini-link" href="{{ "/posts/" | relURL }}">all posts →</a>
+    </div>
+
+    <div class="jk-writing-list">
+      {{ range first 5 $posts.ByDate.Reverse }}
+      <a class="jk-writing-item" href="{{ .RelPermalink }}">
+        <span class="jk-writing-title">{{ .Title }}</span>
+        <span class="jk-writing-date">{{ .Date.Format "Jan 2006" }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="jk-section" aria-labelledby="site-map">
+    <div class="jk-section-heading">
+      <div>
+        <p class="jk-kicker">site map</p>
+        <h2 id="site-map">Chronological indexes, not a maze</h2>
+      </div>
+    </div>
+
+    <div class="jk-link-grid">
+      <a class="jk-link-tile" href="{{ "/projects/" | relURL }}">
+        <strong>Projects</strong>
+        <span>Recent/current project work first, older work further down.</span>
+      </a>
+      <a class="jk-link-tile" href="{{ "/talks/" | relURL }}">
+        <strong>Talks</strong>
+        <span>Conference appearances and public speaking in reverse chronological order.</span>
+      </a>
+      <a class="jk-link-tile" href="{{ "/posts/" | relURL }}">
+        <strong>Writing</strong>
+        <span>Longer posts grouped by year, newest first.</span>
+      </a>
+      <a class="jk-link-tile" href="{{ "/notes/" | relURL }}">
+        <strong>Notes</strong>
+        <span>Shorter lab notes and debug breadcrumbs, also chronological.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="jk-section jk-now-strip" aria-labelledby="current-focus">
+    <div>
+      <p class="jk-kicker">now-ish</p>
+      <h2 id="current-focus">Current focus</h2>
+      <p>
+        Low-level systems, Rust engine tooling, seL4/sDDF networking experiments, FPGA/RISC‑V rabbit holes,
+        and making this site less dead without pretending every note has to be a polished essay.
+      </p>
+    </div>
+    <a class="jk-button" href="{{ "/now/" | relURL }}">Open /now</a>
+  </section>
+</main>
+{{ end }}

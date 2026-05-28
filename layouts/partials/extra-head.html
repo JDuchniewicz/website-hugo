@@ -1,0 +1,544 @@
+<style>
+  :root {
+    --jk-wide: 1040px;
+    --jk-text: #222;
+    --jk-muted: #777;
+    --jk-dim: #999;
+    --jk-border: #dcdcdc;
+    --jk-panel: #fff;
+    --jk-panel-soft: #f7f7f7;
+    --jk-accent: #c63368;
+    --jk-accent-soft: rgba(198, 51, 104, 0.08);
+    --jk-radius: 12px;
+  }
+
+  body.dark-theme {
+    --jk-text: #d8d8df;
+    --jk-muted: #a9a9b3;
+    --jk-dim: #73747b;
+    --jk-border: #4a4b50;
+    --jk-panel: #292a2d;
+    --jk-panel-soft: #303136;
+    --jk-accent: #ff7aa7;
+    --jk-accent-soft: rgba(255, 122, 167, 0.10);
+  }
+
+  .content > .jk-home,
+  .content > .jk-page,
+  .content > .jk-writing-page {
+    width: min(var(--jk-wide), calc(100% - 42px));
+    margin: 0 auto;
+    padding: 42px 0 70px;
+    text-align: left;
+  }
+
+  .jk-page-narrow {
+    max-width: 860px;
+  }
+
+  .jk-home a,
+  .jk-page a,
+  .jk-writing-page a {
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+
+  .jk-home h1,
+  .jk-home h2,
+  .jk-page h1,
+  .jk-page h2,
+  .jk-writing-page h1,
+  .jk-writing-page h2,
+  .jk-card h3,
+  .jk-entry h2,
+  .jk-project-card h3,
+  .jk-talk-card h3 {
+    display: block;
+    color: var(--jk-text);
+    letter-spacing: -0.025em;
+  }
+
+  .jk-home p,
+  .jk-page p,
+  .jk-writing-page p,
+  .jk-card p,
+  .jk-entry p,
+  .jk-project-card p,
+  .jk-talk-card p {
+    color: var(--jk-muted);
+  }
+
+  .jk-kicker {
+    margin: 0 0 8px;
+    color: var(--jk-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .jk-page-header {
+    margin-bottom: 30px;
+  }
+
+  .jk-page-header h1,
+  .jk-hero-copy h1 {
+    margin: 0 0 14px;
+    line-height: 1;
+  }
+
+  .jk-page-header h1 {
+    font-size: clamp(2.05rem, 5vw, 3.7rem);
+  }
+
+  .jk-hero-copy h1 {
+    font-size: clamp(2.45rem, 7vw, 5rem);
+  }
+
+  .jk-lede,
+  .jk-page-subtitle {
+    max-width: 760px;
+    font-size: clamp(1.02rem, 2vw, 1.18rem);
+    line-height: 1.65;
+  }
+
+  .jk-home-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.85fr);
+    gap: 34px;
+    align-items: center;
+    padding: 36px 0 28px;
+    isolation: isolate;
+  }
+
+  /* Homepage-only flavour: static, subtle, no flicker/animation. */
+  .jk-home-hero::before {
+    content: "";
+    position: absolute;
+    inset: -20px -18px -10px;
+    z-index: -1;
+    border: 1px solid var(--jk-border);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 14% 22%, var(--jk-accent-soft), transparent 17rem),
+      linear-gradient(90deg, rgba(127,127,127,0.07) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(127,127,127,0.055) 1px, transparent 1px);
+    background-size: auto, 44px 44px, 44px 44px;
+    opacity: 0.75;
+  }
+
+  .jk-focus-card {
+    border: 1px solid var(--jk-border);
+    border-radius: var(--jk-radius);
+    background: var(--jk-panel-soft);
+    overflow: hidden;
+  }
+
+  .jk-focus-card__top {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--jk-border);
+    color: var(--jk-dim);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .jk-focus-card pre {
+    margin: 0;
+    padding: 18px;
+    white-space: pre-wrap;
+    color: var(--jk-text);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .jk-section {
+    margin-top: 44px;
+  }
+
+  .jk-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .jk-section-heading h2 {
+    margin: 0;
+    font-size: clamp(1.45rem, 3vw, 2.05rem);
+  }
+
+  .jk-actions,
+  .jk-card-links,
+  .jk-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  .jk-actions {
+    margin-top: 24px;
+  }
+
+  .jk-button,
+  .jk-card-links a,
+  .jk-chip,
+  .jk-mini-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--jk-border);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    text-decoration: none !important;
+    transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+  }
+
+  .jk-button {
+    padding: 9px 14px;
+  }
+
+  .jk-button-primary {
+    border-color: var(--jk-accent);
+    background: var(--jk-accent-soft);
+  }
+
+  .jk-card-links a,
+  .jk-chip,
+  .jk-mini-link {
+    padding: 5px 9px;
+    font-size: 0.84rem;
+  }
+
+  .jk-chip {
+    color: var(--jk-muted);
+  }
+
+  .jk-button:hover,
+  .jk-card-links a:hover,
+  .jk-mini-link:hover,
+  .jk-entry:hover,
+  .jk-link-tile:hover {
+    border-color: var(--jk-accent);
+    background: var(--jk-accent-soft);
+    transform: translateY(-1px);
+  }
+
+  .jk-card,
+  .jk-link-tile,
+  .jk-callout,
+  .jk-entry,
+  .jk-project-card,
+  .jk-talk-card,
+  .jk-now-strip {
+    border: 1px solid var(--jk-border);
+    border-radius: var(--jk-radius);
+    background: transparent;
+  }
+
+  .jk-card,
+  .jk-link-tile,
+  .jk-callout {
+    padding: 18px;
+  }
+
+  .jk-feature-grid,
+  .jk-link-grid,
+  .jk-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .jk-card,
+  .jk-link-tile {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: inherit;
+    text-decoration: none !important;
+  }
+
+  .jk-card h3,
+  .jk-link-tile strong,
+  .jk-project-card h3,
+  .jk-talk-card h3,
+  .jk-entry h2 {
+    margin: 0 0 8px;
+    line-height: 1.22;
+  }
+
+  .jk-card p,
+  .jk-project-card p,
+  .jk-talk-card p,
+  .jk-entry p {
+    margin: 0 0 13px;
+  }
+
+  .jk-card-topline,
+  .jk-entry-meta,
+  .jk-talk-event,
+  .jk-project-when {
+    color: var(--jk-dim);
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .jk-card-topline {
+    margin-bottom: 9px;
+  }
+
+  .jk-card-media {
+    position: relative;
+    height: 150px;
+    margin: -18px -18px 16px;
+    border-bottom: 1px solid var(--jk-border);
+    overflow: hidden;
+    background: var(--jk-panel-soft);
+  }
+
+  .jk-card-media img,
+  .jk-entry-thumb img,
+  .jk-project-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .jk-card-media span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.24);
+    border-radius: 999px;
+    background: rgba(0,0,0,0.42);
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .jk-card-links {
+    margin-top: auto;
+  }
+
+  .jk-chrono-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .jk-year {
+    margin: 26px 0 2px;
+    color: var(--jk-dim) !important;
+    font-size: 0.9rem !important;
+    font-weight: 800;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase;
+  }
+
+  .jk-entry {
+    display: grid;
+    grid-template-columns: 108px 150px minmax(0, 1fr);
+    gap: 16px;
+    align-items: stretch;
+    padding: 12px;
+    color: inherit;
+    text-decoration: none !important;
+  }
+
+  .jk-entry-date {
+    color: var(--jk-dim);
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+
+  .jk-entry-thumb {
+    min-height: 92px;
+    border: 1px solid var(--jk-border);
+    border-radius: 9px;
+    background: var(--jk-panel-soft);
+    overflow: hidden;
+  }
+
+
+  .jk-entry-thumb span {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    min-height: 92px;
+    padding: 10px;
+    color: var(--jk-dim);
+    font-size: 0.75rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .jk-entry-body h2 {
+    font-size: clamp(1.05rem, 2vw, 1.32rem);
+  }
+
+  .jk-entry-body p {
+    max-width: 720px;
+    font-size: 0.96rem;
+  }
+
+  .jk-project-list,
+  .jk-talk-timeline {
+    display: grid;
+    gap: 13px;
+    margin: 26px 0 30px;
+  }
+
+  .jk-project-card {
+    display: grid;
+    grid-template-columns: 148px minmax(0, 1fr);
+    gap: 16px;
+    padding: 14px;
+  }
+
+  .jk-project-thumb {
+    min-height: 110px;
+    border: 1px solid var(--jk-border);
+    border-radius: 10px;
+    background: var(--jk-panel-soft);
+    overflow: hidden;
+  }
+
+  .jk-project-body,
+  .jk-talk-body {
+    min-width: 0;
+  }
+
+  .jk-project-card h3,
+  .jk-talk-card h3 {
+    font-size: clamp(1.12rem, 2.1vw, 1.45rem);
+  }
+
+  .jk-talk-card {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 16px;
+    padding: 14px;
+  }
+
+  .jk-talk-meta {
+    border-right: 1px solid var(--jk-border);
+    padding-right: 16px;
+  }
+
+  .jk-talk-year {
+    color: var(--jk-text);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .jk-talk-event {
+    margin-top: 5px;
+    line-height: 1.45;
+  }
+
+  .jk-writing-list {
+    border: 1px solid var(--jk-border);
+    border-radius: var(--jk-radius);
+    overflow: hidden;
+  }
+
+  .jk-writing-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--jk-border);
+    color: inherit;
+    text-decoration: none !important;
+  }
+
+  .jk-writing-item:last-child {
+    border-bottom: 0;
+  }
+
+  .jk-writing-title {
+    color: var(--jk-text);
+  }
+
+  .jk-writing-date {
+    flex: 0 0 auto;
+    color: var(--jk-dim);
+    font-size: 0.88rem;
+  }
+
+  .jk-now-strip {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .jk-now-strip h2 {
+    margin: 0 0 8px;
+  }
+
+  .jk-now-strip p,
+  .jk-callout p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .jk-home-hero,
+    .jk-feature-grid,
+    .jk-link-grid,
+    .jk-card-grid,
+    .jk-now-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .jk-home-hero::before {
+      inset: -12px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .content > .jk-home,
+    .content > .jk-page,
+    .content > .jk-writing-page {
+      width: min(100% - 24px, var(--jk-wide));
+      padding: 28px 0 56px;
+    }
+
+    .jk-section-heading,
+    .jk-writing-item {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .jk-entry,
+    .jk-project-card,
+    .jk-talk-card {
+      grid-template-columns: 1fr;
+    }
+
+    .jk-entry-thumb,
+    .jk-project-thumb {
+      min-height: 150px;
+    }
+
+    .jk-talk-meta {
+      border-right: 0;
+      border-bottom: 1px solid var(--jk-border);
+      padding: 0 0 12px;
+    }
+  }
+</style>
