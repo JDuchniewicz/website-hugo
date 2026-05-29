@@ -164,7 +164,13 @@ disableHugoGeneratorInject = false
     weight     = 50
 
   [[menu.main]]
+    identifier = "cv"
+    name       = "CV"
+    url        = "/cv/"
+    weight     = 60
+
+  [[menu.main]]
     identifier = "now"
     name       = "Now"
     url        = "/now/"
-    weight     = 60
+    weight     = 70

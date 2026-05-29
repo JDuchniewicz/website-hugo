@@ -2,11 +2,11 @@
 <main class="jk-home" aria-role="main">
   <section class="jk-home-hero" aria-labelledby="home-title">
     <div class="jk-hero-copy">
-      <p class="jk-kicker">embedded · telecom · rust · fpga · game-dev</p>
+      <p class="jk-kicker">embedded · telecom · rust · C · fpga · game-dev</p>
       <h1 id="home-title">Jakub Duchniewicz</h1>
       <p class="jk-lede">
-        I build systems close to the metal: embedded software, 5G/L1 work, Rust tooling,
-        FPGA experiments, Zephyr devices and game-engine prototypes.
+        I build systems close to the metal: embedded software, telco 5G/L1 work, Rust/C/C++,
+        FPGAs, RTOS, microkernels and Zephyr based devices. I also develop a high-performance game engine Pill Engine.
       </p>
       <div class="jk-actions" aria-label="Primary links">
         <a class="jk-button jk-button-primary" href="{{ "/projects/" | relURL }}">Projects</a>
@@ -17,11 +17,12 @@
 
     <aside class="jk-focus-card" aria-label="Current focus snapshot">
       <div class="jk-focus-card__top">current focus</div>
-      <pre><code>systems  embedded · linux · zephyr · seL4
-radio    5G NR L1 · Open RAN · FlexRAN
-rust     engines · tools · FFI · hot reload
-hw       FPGA · RISC-V · cursed prototypes
-site     rebuilding the lab notebook</code></pre>
+      <pre><code>systems        embedded · linux · seL4
+hw             FPGA · RISC-V · ARM
+game engines   scripting · tools · FFI ·
+               hot reload
+radio          5G NR L1 · FlexRAN
+website        start taking lab notes</code></pre>
     </aside>
   </section>
 
@@ -89,41 +90,13 @@ site     rebuilding the lab notebook</code></pre>
   </section>
   {{ end }}
 
-  <section class="jk-section" aria-labelledby="site-map">
-    <div class="jk-section-heading">
-      <div>
-        <p class="jk-kicker">site map</p>
-        <h2 id="site-map">Chronological indexes, not a maze</h2>
-      </div>
-    </div>
-
-    <div class="jk-link-grid">
-      <a class="jk-link-tile" href="{{ "/projects/" | relURL }}">
-        <strong>Projects</strong>
-        <span>Recent/current project work first, older work further down.</span>
-      </a>
-      <a class="jk-link-tile" href="{{ "/talks/" | relURL }}">
-        <strong>Talks</strong>
-        <span>Conference appearances and public speaking in reverse chronological order.</span>
-      </a>
-      <a class="jk-link-tile" href="{{ "/posts/" | relURL }}">
-        <strong>Writing</strong>
-        <span>Longer posts grouped by year, newest first.</span>
-      </a>
-      <a class="jk-link-tile" href="{{ "/notes/" | relURL }}">
-        <strong>Notes</strong>
-        <span>Shorter lab notes and debug breadcrumbs, also chronological.</span>
-      </a>
-    </div>
-  </section>
-
   <section class="jk-section jk-now-strip" aria-labelledby="current-focus">
     <div>
       <p class="jk-kicker">now-ish</p>
       <h2 id="current-focus">Current focus</h2>
       <p>
-        Low-level systems, Rust engine tooling, seL4/sDDF networking experiments, FPGA/RISC‑V rabbit holes,
-        and making this site less dead without pretending every note has to be a polished essay.
+        Low-level systems, Rust engine tooling, seL4/sDDF networking, FPGA/RISC‑V rabbit holes,
+        and making this site less dead.
       </p>
     </div>
     <a class="jk-button" href="{{ "/now/" | relURL }}">Open /now</a>

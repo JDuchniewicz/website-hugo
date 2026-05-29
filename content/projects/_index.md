@@ -1,17 +1,17 @@
 +++
 title = "Projects"
-description = "A lightweight, chronological-ish index of selected embedded, hardware, Rust and game-tech work. New/current work appears first."
+description = "What I have been tinkering around with."
 +++
 
 <div class="jk-project-list">
   <article class="jk-project-card" id="pill-engine">
     <div class="jk-project-thumb">
-      <img src="/about_res/polyengine.png" alt="Game engine experiments" loading="lazy" onerror="this.remove()">
+      <img src="/about_res/pill_logo_horizontal.png" alt="Pill Engine" loading="lazy" onerror="this.remove()">
     </div>
     <div class="jk-project-body">
       <div class="jk-project-when">current · Rust · ECS · game tooling</div>
-      <h3>Pill Engine / game-tech experiments</h3>
-      <p>Rust game-engine experiments around ECS, hot reload, C# scripting, FFI, networking and editor/tooling architecture.</p>
+      <h3>Pill Engine</h3>
+      <p>Novel Rust game-engine based on ECS architecture, includes hot reload, novel rendering approach, C# scripting, networking and soon a working editor.</p>
       <div class="jk-chip-row"><span class="jk-chip">Rust</span><span class="jk-chip">ECS</span><span class="jk-chip">C#</span><span class="jk-chip">FFI</span><span class="jk-chip">Game engine</span></div>
       <div class="jk-card-links"><a href="{{< relref "/about.md" >}}#polyengine">Older engine work</a></div>
     </div>
@@ -57,7 +57,7 @@ description = "A lightweight, chronological-ish index of selected embedded, hard
     <div class="jk-project-body">
       <div class="jk-project-when">2021–2023 · open hardware · embedded ML</div>
       <h3>BIBoP wearable health monitor</h3>
-      <p>Open hardware wearable health-monitor prototype with embedded ML ambitions, later ported toward Zephyr and used for conference talks.</p>
+      <p>Open hardware wearable health-monitor prototype with embedded ML blood pressure inference, later ported toward Zephyr presented at conferences.</p>
       <div class="jk-chip-row"><span class="jk-chip">Zephyr</span><span class="jk-chip">Embedded ML</span><span class="jk-chip">Wearables</span><span class="jk-chip">Open hardware</span></div>
       <div class="jk-card-links">
         <a href="{{< relref "/posts/31-05-21-bibop_1_Intro_ML.md" >}}">Intro post</a>
@@ -120,7 +120,7 @@ description = "A lightweight, chronological-ish index of selected embedded, hard
     <div class="jk-project-body">
       <div class="jk-project-when">older · engine architecture · tooling</div>
       <h3>PolyEngine</h3>
-      <p>Student-society game engine work using ECS/data-oriented design, C/C++, CMake/Meson and graphics/tooling experiments around Vulkan.</p>
+      <p>KNTG Polygon game engine work using ECS/data-oriented design, C/C++, CMake/Meson and graphics/tooling experiments around Vulkan.</p>
       <div class="jk-chip-row"><span class="jk-chip">C</span><span class="jk-chip">C++</span><span class="jk-chip">Vulkan</span><span class="jk-chip">ECS</span></div>
       <div class="jk-card-links">
         <a href="{{< relref "/about.md" >}}#polyengine">About entry</a>
@@ -129,5 +129,3 @@ description = "A lightweight, chronological-ish index of selected embedded, hard
     </div>
   </article>
 </div>
-
-<p class="jk-page-subtitle">Keep this page compact: if a project grows into a proper write-up, link to the post instead of turning this index into another giant About page.</p>

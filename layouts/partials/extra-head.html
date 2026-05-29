@@ -541,4 +541,155 @@
       padding: 0 0 12px;
     }
   }
+  .jk-cv-hero {
+  margin: 1.5rem 0 2.2rem;
+  padding: 1.35rem;
+  border: 1px solid rgba(128, 128, 128, 0.18);
+  border-radius: 12px;
+  background: rgba(128, 128, 128, 0.035);
+}
+
+.jk-cv-hero h2 {
+  margin: 0.25rem 0 0.8rem;
+  line-height: 1.28;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+}
+
+.jk-cv-hero p {
+  margin-bottom: 0;
+}
+
+.jk-cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.jk-cv-actions a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.68rem;
+  border: 1px solid rgba(128, 128, 128, 0.24);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  background: rgba(128, 128, 128, 0.035);
+}
+
+.jk-cv-actions a:hover {
+  background: rgba(128, 128, 128, 0.08);
+}
+
+.jk-skill-grid {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1rem 0 2rem;
+}
+
+.jk-skill-card {
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.18);
+  border-left: 3px solid var(--accent, #ff6188);
+  border-radius: 10px;
+  background: rgba(128, 128, 128, 0.035);
+}
+
+.jk-skill-card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.jk-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.45rem;
+}
+
+.jk-skill-tags code {
+  display: inline-block;
+  padding: 0.16rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(128, 128, 128, 0.22);
+  background: rgba(128, 128, 128, 0.075);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.jk-cv-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.1rem 0 2rem;
+}
+
+.jk-cv-entry {
+  display: grid;
+  grid-template-columns: minmax(125px, 205px) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 0.95rem;
+  border: 1px solid rgba(128, 128, 128, 0.18);
+  border-radius: 12px;
+  background: rgba(128, 128, 128, 0.03);
+}
+
+.jk-cv-entry figure {
+  margin: 0;
+  min-height: 105px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: rgba(128, 128, 128, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jk-cv-entry img {
+  width: 100%;
+  height: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.jk-cv-entry .jk-cv-logo img,
+.jk-cv-logo img {
+  width: auto;
+  max-width: 72%;
+  max-height: 82px;
+  object-fit: contain;
+  padding: 0.9rem;
+}
+
+.jk-cv-entry h3 {
+  margin-top: 0.05rem;
+  margin-bottom: 0.45rem;
+  font-size: 1.1rem;
+}
+
+.jk-cv-entry p {
+  margin: 0.45rem 0;
+}
+
+.jk-cv-entry .jk-card-topline {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 720px) {
+  .jk-cv-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .jk-cv-entry figure {
+    max-height: 190px;
+  }
+
+  .jk-cv-entry img {
+    max-height: 190px;
+  }
+}
 </style>

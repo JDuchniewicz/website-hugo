@@ -1,26 +1,22 @@
 +++
 title = "Now"
-description = "What Jakub is currently focused on."
+description = "My current focus"
 +++
 
 <p class="jk-page-subtitle">
-A lightweight status page for things that are active enough to mention but not necessarily polished enough to become articles yet.
+Right now I am mostly developing <strong><a href="https://github.com/MattSzymonski/Pill-Engine">Pill Engine</a></strong>. Current topics include designing sane C# scripting API, writing scene serialization/deserialization and preparing for the introduction of the editor.
 </p>
 
 <div class="jk-card-grid">
   <article class="jk-card">
-    <div class="jk-card-topline">Current technical rabbit holes</div>
-    <h3>Systems, engines and hardware/software edges</h3>
-    <p>Rust engine/tooling work, managed-runtime experiments, seL4/sDDF networking, FPGA/RISC‑V projects, embedded systems and telecom/5G topics.</p>
+    <div class="jk-card-topline">Current technical focus</div>
+    <h3>OSes, Pill Engine and reading <strong><a href="https://pagedout.institute/">Paged Out</a></strong> on the plane</h3>
+    <p>Learning more about microkernels, proper scripting in game engines and improving my backside surfing skills in Bali</p>
   </article>
 
   <article class="jk-card">
-    <div class="jk-card-topline">Site direction</div>
-    <h3>More lab notebook, less abandoned blog</h3>
-    <p>The aim is to make small notes worth publishing, while keeping polished posts and project pages for the bigger things.</p>
+    <div class="jk-card-topline">Up Next</div>
+    <h3>More short notes from my work</h3>
+    <p>I have been afraid of commiting to writing big stories, therefore I have heaps of unfinished blogs that could be published as shorter notes.</p>
   </article>
-</div>
-
-<div class="jk-callout">
-  <p>Update this page whenever your focus changes. It is supposed to be cheap to maintain.</p>
 </div>
