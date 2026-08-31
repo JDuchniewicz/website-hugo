@@ -124,7 +124,7 @@ disableHugoGeneratorInject = false
 
   [[params.social]]
     name = "cv"
-    url = "https://jduchniewicz.com/cv.pdf"
+    url = "/cv/"
 
 [languages]
   [languages.en.params]
@@ -152,25 +152,13 @@ disableHugoGeneratorInject = false
     weight     = 30
 
   [[menu.main]]
-    identifier = "notes"
-    name       = "Notes"
-    url        = "/notes/"
-    weight     = 40
-
-  [[menu.main]]
     identifier = "about"
     name       = "About"
     url        = "/about/"
-    weight     = 50
+    weight     = 40
 
   [[menu.main]]
     identifier = "cv"
     name       = "CV"
     url        = "/cv/"
-    weight     = 60
-
-  [[menu.main]]
-    identifier = "now"
-    name       = "Now"
-    url        = "/now/"
-    weight     = 70
+    weight     = 50
