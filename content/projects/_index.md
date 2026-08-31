@@ -1,14 +1,14 @@
 +++
 title = "Projects"
-description = "Selected systems and projects"
+description = "Selected projects and hacks"
 +++
 
-## Featured systems
+## Featured projects
 
-{{< project id="pill-engine" meta="current · Rust · ECS · game tooling" title="Pill Engine" >}}
+{{< project id="pill-engine" meta="current · Rust · ECS · game tooling" image="/about_res/pill_logo_white.png" alt="Pill Logo" title="Pill Engine" >}}
 Rust game-engine project focused on ECS, architecture, scripting experiments, hot reloading and making weird games easier to build.
 
-`Rust` `ECS` `C#` `FFI` `Hot reload`
+`Rust` `ECS` `C# Scripting` `Hot reload` `Vulkan`
 
 [GitHub](https://github.com/MattSzymonski/Pill-Engine) · [Older engine work](#polyengine)
 {{< /project >}}
@@ -52,9 +52,11 @@ I will reimplement the amazing tutorial on *Ray Tracing in One Weekend* in the R
 {{< /project >}}
 
 {{< project id="rustalizer" class="jk-project-card--compact" meta="2020–2021" title="Rustalizer" >}}
+Audio frequency visualizer written in Rust, delivered as both a GTK desktop app and a console distraction in the spirit of old-school Winamp toys.
 {{< /project >}}
 
 {{< project id="polyengine" class="jk-project-card--compact" meta="older" title="PolyEngine" >}}
+Spiritual predecessor of Pill Engine, driven by the mad wizards of KNTG Polygon. With modern C++ approaches and performance-first ECS architecture.
 [GitHub](https://github.com/PolyEngineTeam/PolyEngine/)
 {{< /project >}}
 
