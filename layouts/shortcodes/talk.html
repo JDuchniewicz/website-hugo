@@ -1,0 +1,14 @@
+<article class="jk-talk-card{{ with .Get "image" }} jk-talk-card--with-media{{ end }}{{ with .Get "featured" }} jk-talk-card--featured{{ end }}"{{ with .Get "id" }} id="{{ . }}"{{ end }}>
+  {{ with .Get "image" }}
+  <figure class="jk-talk-card__media{{ with $.Get "contain" }} jk-talk-card__media--contain{{ end }}">
+    <img src="{{ . }}" alt="{{ $.Get "alt" }}" loading="lazy" onerror="this.closest('figure').remove()">
+  </figure>
+  {{ end }}
+  <div class="jk-talk-card__body">
+    {{ with .Get "meta" }}<p class="jk-card-topline">{{ . }}</p>{{ end }}
+    <h2>{{ .Get "title" }}</h2>
+    <div class="jk-talk-card__content">
+      {{ .Inner | .Page.RenderString }}
+    </div>
+  </div>
+</article>

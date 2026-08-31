@@ -1,0 +1,1521 @@
+:root {
+  --jk-wide: 1040px;
+  --jk-narrow: 760px;
+  --jk-text: #222;
+  --jk-muted: #666;
+  --jk-dim: #888;
+  --jk-border: #dcdcdc;
+  --jk-panel: #fff;
+  --jk-panel-soft: #f7f7f7;
+  --jk-accent: #c63368;
+  --jk-accent-soft: rgba(198, 51, 104, 0.08);
+  --jk-radius: 10px;
+}
+
+body.dark-theme {
+  --jk-text: #d8d8df;
+  --jk-muted: #a9a9b3;
+  --jk-dim: #73747b;
+  --jk-border: #4a4b50;
+  --jk-panel: #292a2d;
+  --jk-panel-soft: #303136;
+  --jk-accent: #ff7aa7;
+  --jk-accent-soft: rgba(255, 122, 167, 0.09);
+}
+
+/* shared page frame ------------------------------------------------------- */
+.content > .jk-home,
+.content > .jk-page,
+.content > .jk-writing-page {
+  box-sizing: border-box;
+  width: min(var(--jk-wide), calc(100% - 40px));
+  margin: 0 auto;
+  padding: 42px 0 68px;
+  text-align: left;
+}
+
+.content > .jk-page-narrow {
+  max-width: var(--jk-narrow);
+}
+
+.jk-page > article,
+.jk-page .post-content {
+  min-width: 0;
+}
+
+.jk-page-header {
+  margin-bottom: 28px;
+}
+
+.jk-page-header h1,
+.jk-home h1,
+.jk-home h2,
+.jk-page h2,
+.jk-page h3,
+.jk-writing-page h1,
+.jk-writing-page h2,
+.jk-writing-page h3 {
+  color: var(--jk-text);
+}
+
+.jk-page-header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.jk-page-subtitle,
+.jk-lede {
+  max-width: 760px;
+  color: var(--jk-muted);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.6;
+}
+
+.jk-page .post-content {
+  margin-top: 0;
+}
+
+.jk-page .post-content > h2 {
+  margin: 2.25rem 0 0.85rem;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.jk-page .post-content > h3 {
+  margin: 1.35rem 0 0.35rem;
+  font-size: 1.03rem;
+  line-height: 1.3;
+}
+
+.jk-page .post-content p,
+.jk-page .post-content li {
+  line-height: 1.62;
+}
+
+.jk-page .post-content a,
+.jk-home a,
+.jk-writing-page a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.jk-kicker,
+.jk-card-topline,
+.jk-entry-meta {
+  margin: 0 0 8px;
+  color: var(--jk-dim) !important;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+}
+
+/* reusable buttons / links ---------------------------------------------- */
+.jk-actions,
+.jk-card-links,
+.jk-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jk-actions {
+  margin-top: 22px;
+}
+
+.jk-button,
+.jk-card-links a,
+.jk-mini-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--jk-border);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  text-decoration: none !important;
+  transition: border-color 120ms ease, background 120ms ease, transform 120ms ease;
+}
+
+.jk-button {
+  padding: 8px 13px;
+}
+
+.jk-card-links a,
+.jk-mini-link {
+  padding: 5px 9px;
+  font-size: 0.84rem;
+}
+
+.jk-button-primary {
+  border-color: var(--jk-accent);
+  background: var(--jk-accent-soft);
+}
+
+.jk-button:hover,
+.jk-card-links a:hover,
+.jk-mini-link:hover,
+.jk-entry:hover,
+.jk-link-tile:hover {
+  border-color: var(--jk-accent);
+  background: var(--jk-accent-soft);
+  transform: translateY(-1px);
+}
+
+/* markdown link rows. Links stay markdown; icons are presentation only. */
+.jk-link-row {
+  margin: 1.15rem 0 1.6rem;
+}
+
+.jk-link-row p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.55rem;
+  margin: 0;
+}
+
+.jk-link-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  min-height: 2rem;
+  color: var(--jk-muted);
+}
+
+.jk-link-row a:hover {
+  color: var(--jk-text);
+}
+
+.jk-link-row a::before {
+  display: inline-block;
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: 0 0 0.95rem;
+  background: currentColor;
+  content: "";
+  -webkit-mask: var(--jk-link-icon) center / contain no-repeat;
+  mask: var(--jk-link-icon) center / contain no-repeat;
+}
+
+.jk-link-row a[href$="/cv/"],
+.jk-link-row a[href$="/cv.pdf"] {
+  --jk-link-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6 2h8l4 4v16H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 2H6v16h10V7h-3V4Zm1.4.4V6h1.6l-1.6-1.6ZM8 11h6v2H8v-2Zm0 4h6v2H8v-2Z'/%3E%3C/svg%3E");
+}
+
+.jk-link-row a[href*="github.com"] {
+  --jk-link-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.88c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 6.72c.85 0 1.7.11 2.5.34 1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v3.06c0 .27.18.58.69.48A10 10 0 0 0 12 2Z'/%3E%3C/svg%3E");
+}
+
+.jk-link-row a[href*="linkedin.com"] {
+  --jk-link-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M5.3 8.3H2.1V21h3.2V8.3ZM3.7 3A1.86 1.86 0 1 0 3.7 6.72 1.86 1.86 0 0 0 3.7 3ZM21.9 13.72c0-3.83-2.04-5.61-4.76-5.61-2.2 0-3.18 1.21-3.72 2.06V8.3h-3.2V21h3.2v-6.29c0-1.66.31-3.27 2.37-3.27 2.03 0 2.06 1.9 2.06 3.38V21h3.2l.85-7.28Z'/%3E%3C/svg%3E");
+}
+
+.jk-link-row a[href^="mailto:"] {
+  --jk-link-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 3.2V18h16V7.2l-8 5.3-8-5.3Zm1.2-1.2L12 10.5 18.8 6H5.2Z'/%3E%3C/svg%3E");
+}
+
+.jk-link-row a[href*="buymeacoffee.com"] {
+  --jk-link-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M4 6h13v2h2a3 3 0 0 1 0 6h-2.35A6 6 0 0 1 11 18H10a6 6 0 0 1-6-6V6Zm2 2v4a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4V8H6Zm11 2v2h2a1 1 0 0 0 0-2h-2ZM3 20h16v2H3v-2Z'/%3E%3C/svg%3E");
+}
+
+/* home ------------------------------------------------------------------- */
+.jk-home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 34px;
+  align-items: center;
+  padding: 22px 0 30px;
+}
+
+.jk-hero-copy h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.5rem, 7vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.jk-focus-card,
+.jk-card,
+.jk-link-tile,
+.jk-callout,
+.jk-now-strip,
+.jk-writing-list {
+  border: 1px solid var(--jk-border);
+  border-radius: var(--jk-radius);
+  background: transparent;
+}
+
+.jk-focus-card {
+  overflow: hidden;
+}
+
+.jk-focus-card__top {
+  padding: 10px 13px;
+  border-bottom: 1px solid var(--jk-border);
+  color: var(--jk-dim);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.jk-focus-card pre {
+  margin: 0;
+  padding: 16px;
+  white-space: pre-wrap;
+  color: var(--jk-text);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.jk-section {
+  margin-top: 42px;
+}
+
+.jk-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+
+.jk-section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.jk-feature-grid,
+.jk-link-grid,
+.jk-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.jk-card,
+.jk-link-tile {
+  display: flex;
+  min-height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 17px;
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.jk-card h3,
+.jk-link-tile strong {
+  margin: 0 0 7px;
+  color: var(--jk-text);
+}
+
+.jk-card p {
+  margin: 0 0 12px;
+  color: var(--jk-muted);
+}
+
+.jk-card-media {
+  position: relative;
+  height: 150px;
+  margin: -17px -17px 15px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--jk-border);
+  background: var(--jk-panel-soft);
+}
+
+.jk-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jk-card-media span {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+.jk-card-links {
+  margin-top: auto;
+}
+
+.jk-link-tile span {
+  color: var(--jk-muted);
+  line-height: 1.45;
+}
+
+.jk-writing-list {
+  overflow: hidden;
+}
+
+.jk-writing-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--jk-border);
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.jk-writing-item:last-child {
+  border-bottom: 0;
+}
+
+.jk-writing-date {
+  flex: 0 0 auto;
+  color: var(--jk-dim);
+  font-size: 0.87rem;
+}
+
+.jk-now-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  padding: 17px;
+}
+
+.jk-now-strip h2,
+.jk-now-strip p:last-child {
+  margin-bottom: 0;
+}
+
+/* about ------------------------------------------------------------------ */
+.jk-about-page {
+  max-width: 900px;
+}
+
+.jk-about-page .jk-page-header {
+  margin-bottom: 22px;
+}
+
+.jk-about-page .post-content > h2:first-child {
+  margin-top: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.jk-polaroid {
+  float: right;
+  width: min(var(--jk-polaroid-max), 38%);
+  margin: 0 0 1.4rem 2rem;
+  border: 1px solid var(--jk-border);
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--jk-panel-soft);
+}
+
+.jk-polaroid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.jk-polaroid figcaption {
+  padding: 8px 10px 9px;
+  border-top: 1px solid var(--jk-border);
+  color: var(--jk-muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.jk-about-page .post-content::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.jk-about-page .post-content > ul {
+  columns: 2;
+  column-gap: 2.5rem;
+}
+
+.jk-about-page .post-content > ul li {
+  break-inside: avoid;
+  margin-bottom: 0.35rem;
+}
+
+.jk-social-links {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--jk-border);
+  border-bottom: 1px solid var(--jk-border);
+}
+
+/* CV --------------------------------------------------------------------- */
+.jk-cv-page {
+  max-width: 900px;
+}
+
+.jk-cv-page .jk-page-header {
+  margin-bottom: 18px;
+}
+
+.jk-cv-page .post-content > h2:first-child {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  line-height: 1.13;
+  letter-spacing: -0.03em;
+}
+
+.jk-cv-page .post-content > h2:first-child + p {
+  max-width: 790px;
+  margin-top: 0;
+  color: var(--jk-muted);
+  font-size: 1.05rem;
+}
+
+.jk-cv-links {
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--jk-border);
+  border-bottom: 1px solid var(--jk-border);
+}
+
+.jk-cv-links a:first-of-type {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--jk-accent);
+  border-radius: 999px;
+  background: var(--jk-accent-soft);
+  color: var(--jk-text);
+  text-decoration: none;
+}
+
+.jk-cv-page .post-content > p > code,
+.jk-project-card code,
+.jk-talk-card code,
+.jk-cv-page table code {
+  display: inline-block;
+  margin: 0.12rem 0.12rem 0.12rem 0;
+  padding: 0.12rem 0.42rem;
+  border: 1px solid var(--jk-border);
+  border-radius: 999px;
+  background: var(--jk-panel-soft);
+  color: var(--jk-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.jk-cv-page .post-content > h3 {
+  margin-top: 1.3rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--jk-border);
+}
+
+.jk-cv-page table {
+  width: 100%;
+  margin: 1rem 0 2rem;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+}
+
+.jk-cv-page th,
+.jk-cv-page td {
+  padding: 0.65rem 0.7rem;
+  border-bottom: 1px solid var(--jk-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.jk-cv-page th:first-child,
+.jk-cv-page td:first-child {
+  width: 21%;
+  color: var(--jk-text);
+  font-weight: 700;
+}
+
+.jk-cv-page .post-content > ul {
+  margin-top: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.jk-cv-page .post-content > ul li {
+  margin-bottom: 0.35rem;
+}
+
+/* project index ---------------------------------------------------------- */
+.jk-projects-page .post-content > h2,
+.jk-talks-page .post-content > h2 {
+  margin-top: 2rem;
+}
+
+.jk-project-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 0 0.9rem;
+  border: 1px solid var(--jk-border);
+  border-radius: var(--jk-radius);
+  overflow: hidden;
+  background: transparent;
+}
+
+.jk-project-card--with-media {
+  grid-template-columns: 180px minmax(0, 1fr);
+}
+
+.jk-project-card__media {
+  min-height: 150px;
+  margin: 0;
+  border-right: 1px solid var(--jk-border);
+  background: var(--jk-panel-soft);
+}
+
+.jk-project-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  object-fit: cover;
+}
+
+.jk-project-card__body {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+}
+
+.jk-project-card__body h2 {
+  margin: 0.1rem 0 0.45rem !important;
+  font-size: 1.15rem !important;
+}
+
+.jk-project-card__content > p {
+  margin: 0.35rem 0;
+}
+
+.jk-project-card--compact {
+  border: 0;
+  border-left: 2px solid var(--jk-border);
+  border-radius: 0;
+}
+
+.jk-project-card--compact .jk-project-card__body {
+  padding: 0.25rem 0 0.45rem 0.9rem;
+}
+
+/* talk index ------------------------------------------------------------- */
+.jk-talk-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 0.85rem;
+  border: 1px solid var(--jk-border);
+  border-radius: var(--jk-radius);
+  overflow: hidden;
+  background: transparent;
+}
+
+.jk-talk-card--with-media {
+  grid-template-columns: 145px minmax(0, 1fr);
+}
+
+.jk-talk-card--featured.jk-talk-card--with-media {
+  grid-template-columns: 210px minmax(0, 1fr);
+}
+
+.jk-talk-card__media {
+  min-height: 120px;
+  margin: 0;
+  border-right: 1px solid var(--jk-border);
+  background: var(--jk-panel-soft);
+}
+
+.jk-talk-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  object-fit: cover;
+}
+
+.jk-talk-card__media--contain img {
+  box-sizing: border-box;
+  padding: 1.1rem;
+  object-fit: contain;
+}
+
+.jk-talk-card__body {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+}
+
+.jk-talk-card__body h2 {
+  margin: 0.1rem 0 0.45rem !important;
+  font-size: 1.15rem !important;
+}
+
+.jk-talk-card__content > p {
+  margin: 0.35rem 0;
+}
+
+/* writing / notes indexes ------------------------------------------------ */
+.jk-chrono-list {
+  display: grid;
+  gap: 11px;
+  margin-top: 22px;
+}
+
+.jk-year {
+  margin: 23px 0 0 !important;
+  color: var(--jk-dim) !important;
+  font-size: 0.9rem !important;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.jk-entry {
+  display: grid;
+  grid-template-columns: 92px 135px minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+  padding: 11px;
+  border: 1px solid var(--jk-border);
+  border-radius: var(--jk-radius);
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.jk-entry-date {
+  color: var(--jk-dim);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.jk-entry-thumb {
+  min-height: 84px;
+  overflow: hidden;
+  border: 1px solid var(--jk-border);
+  border-radius: 8px;
+  background: var(--jk-panel-soft);
+}
+
+.jk-entry-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jk-entry-thumb span {
+  display: grid;
+  min-height: 84px;
+  height: 100%;
+  place-items: center;
+  color: var(--jk-dim);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.jk-entry-body {
+  min-width: 0;
+}
+
+.jk-entry-body h2 {
+  margin: 0 0 6px;
+  font-size: 1.12rem;
+}
+
+.jk-entry-body p {
+  margin: 0;
+  color: var(--jk-muted);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+/* old helper classes still used by notes content ------------------------- */
+.jk-callout {
+  margin: 1rem 0;
+  padding: 15px;
+}
+
+.jk-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.jk-card-grid {
+  margin: 1rem 0;
+}
+
+/* responsive ------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .jk-home-hero,
+  .jk-feature-grid,
+  .jk-link-grid,
+  .jk-card-grid,
+  .jk-now-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .jk-project-card--with-media,
+  .jk-talk-card--with-media,
+  .jk-talk-card--featured.jk-talk-card--with-media {
+    grid-template-columns: 1fr;
+  }
+
+  .jk-project-card__media,
+  .jk-talk-card__media {
+    max-height: 230px;
+    border-right: 0;
+    border-bottom: 1px solid var(--jk-border);
+  }
+}
+
+@media (max-width: 700px) {
+  .content > .jk-home,
+  .content > .jk-page,
+  .content > .jk-writing-page {
+    width: min(100% - 24px, var(--jk-wide));
+    padding: 28px 0 52px;
+  }
+
+  .jk-page-header {
+    margin-bottom: 20px;
+  }
+
+  .jk-section-heading,
+  .jk-writing-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .jk-polaroid {
+    float: none;
+    width: min(var(--jk-polaroid-max), 100%);
+    margin: 0 auto 1.5rem;
+  }
+
+  .jk-about-page .post-content > ul {
+    columns: 1;
+  }
+
+  .jk-cv-page table,
+  .jk-cv-page thead,
+  .jk-cv-page tbody,
+  .jk-cv-page tr,
+  .jk-cv-page th,
+  .jk-cv-page td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .jk-cv-page thead {
+    position: absolute;
+    width: 1px !important;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .jk-cv-page td:first-child {
+    padding-bottom: 0.15rem;
+    border-bottom: 0;
+  }
+
+  .jk-cv-page td:last-child {
+    padding-top: 0.15rem;
+  }
+
+  .jk-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .jk-entry-thumb {
+    min-height: 150px;
+  }
+}
+
+/* explicit page hooks used by templates */
+.jk-page-wide { max-width: var(--jk-wide); }
+.jk-notes-page { width: 100%; }
+.jk-now-page { max-width: 820px; }
+.jk-writing-title { color: var(--jk-text); }
+
+/* final visual polish -----------------------------------------------------
+   Keep the content deliberately plain; this layer adds only hierarchy,
+   compactness and a few quiet UI details. */
+
+::selection {
+  background: var(--jk-accent-soft);
+  color: var(--jk-text);
+}
+
+/* Align the theme chrome with the custom page width and make it quieter. */
+.header {
+  padding: 15px 20px;
+  border-bottom: 1px solid transparent;
+}
+
+.header__inner {
+  width: min(var(--jk-wide), 100%);
+}
+
+.menu {
+  margin-right: 14px;
+  border-right-color: var(--jk-border);
+  background: transparent;
+}
+
+.dark-theme .menu {
+  background: transparent;
+}
+
+.menu__inner {
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
+
+.menu__inner li {
+  margin: 0 8px;
+}
+
+.menu a {
+  margin-right: 0;
+  color: var(--jk-muted);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--jk-text);
+  text-decoration: none;
+}
+
+.theme-toggle {
+  color: var(--jk-muted);
+}
+
+#navbar.sticky .header {
+  border-bottom-color: var(--jk-border);
+  background: rgba(250, 250, 250, 0.88);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+}
+
+.dark-theme #navbar.sticky .header {
+  background: rgba(37, 38, 39, 0.88);
+}
+
+/* A little more air at the top, but keep the whole site compact. */
+.content > .jk-home,
+.content > .jk-page,
+.content > .jk-writing-page {
+  padding-top: 46px;
+}
+
+.jk-page-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--jk-border);
+}
+
+.jk-page-subtitle {
+  margin-bottom: 0;
+}
+
+/* Homepage: retain the uploaded version's technical-panel feel, toned down. */
+.jk-home-hero {
+  position: relative;
+  isolation: isolate;
+  margin-top: 4px;
+  padding: 34px 30px;
+  border: 1px solid var(--jk-border);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 11% 18%, var(--jk-accent-soft), transparent 15rem),
+    linear-gradient(90deg, rgba(127, 127, 127, 0.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(127, 127, 127, 0.04) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+}
+
+.jk-home-hero::after {
+  position: absolute;
+  right: 2.2rem;
+  bottom: -1.6rem;
+  z-index: -1;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--jk-accent-soft), transparent 67%);
+  content: "";
+  pointer-events: none;
+}
+
+
+.jk-lede {
+  max-width: 650px;
+}
+
+.jk-focus-card {
+  border-color: color-mix(in srgb, var(--jk-border) 88%, var(--jk-accent) 12%);
+  background: rgba(127, 127, 127, 0.035);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.035);
+}
+
+.dark-theme .jk-focus-card {
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+}
+
+.jk-focus-card__top {
+  background: rgba(127, 127, 127, 0.035);
+}
+
+/* Cards stay mostly flat; the slight surface tint helps scanning. */
+.jk-card,
+.jk-link-tile,
+.jk-writing-list,
+.jk-project-card,
+.jk-talk-card,
+.jk-now-strip,
+.jk-callout {
+  background: rgba(127, 127, 127, 0.025);
+}
+
+.jk-card-media img,
+.jk-project-card__media img,
+.jk-talk-card__media img {
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.jk-card,
+.jk-link-tile,
+.jk-project-card,
+.jk-talk-card,
+.jk-entry {
+  transition: border-color 140ms ease, background 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+}
+
+@media (hover: hover) {
+  .jk-card:hover,
+  .jk-project-card:hover,
+  .jk-talk-card:hover {
+    border-color: color-mix(in srgb, var(--jk-border) 65%, var(--jk-accent) 35%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+  }
+
+  .dark-theme .jk-card:hover,
+  .dark-theme .jk-project-card:hover,
+  .dark-theme .jk-talk-card:hover {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+  }
+
+  .jk-card:hover .jk-card-media img,
+  .jk-project-card:hover .jk-project-card__media img,
+  .jk-talk-card:hover .jk-talk-card__media img {
+    transform: scale(1.012);
+  }
+}
+
+/* Make the secondary site map occupy less vertical space on desktop. */
+@media (min-width: 901px) {
+  .jk-home .jk-link-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .jk-home .jk-link-tile {
+    padding: 14px;
+  }
+
+  .jk-home .jk-link-tile span {
+    font-size: 0.86rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .jk-home .jk-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* About: still a text page, but the photo and lists should feel intentional. */
+.jk-about-page {
+  max-width: 920px;
+}
+
+.jk-about-page .jk-page-header {
+  margin-bottom: 26px;
+}
+
+.jk-about-page .post-content > h2:first-child {
+  margin-bottom: 1.15rem;
+}
+
+.jk-about-page .post-content > p:first-of-type {
+  color: var(--jk-text);
+  font-size: 1.04rem;
+}
+
+.jk-polaroid {
+  border-radius: 12px;
+  background: var(--jk-panel-soft);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+  transform: rotate(0.35deg);
+}
+
+.dark-theme .jk-polaroid {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.jk-about-page .post-content > ul {
+  margin: 0.9rem 0 1.7rem;
+  padding: 0.9rem 1.25rem 0.9rem 2.15rem;
+  border: 1px solid var(--jk-border);
+  border-radius: var(--jk-radius);
+  background: rgba(127, 127, 127, 0.025);
+}
+
+.jk-about-page .post-content > h2:not(:first-child),
+.jk-cv-page .post-content > h2:not(:first-child) {
+  padding-top: 0.15rem;
+}
+
+.jk-social-links {
+  margin-top: 0.65rem;
+  padding: 0.85rem 0;
+}
+
+/* CV: make the page read like a resume rather than another About page. */
+.jk-cv-page {
+  max-width: 940px;
+}
+
+.jk-cv-page .jk-page-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.jk-cv-page .jk-page-header h1 {
+  margin: 0;
+  color: var(--jk-dim);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.jk-cv-page .jk-page-subtitle {
+  max-width: none;
+  margin: 0;
+  color: var(--jk-dim);
+  font-size: 0.84rem;
+}
+
+.jk-cv-page .post-content > h2:first-child {
+  max-width: 760px;
+  font-size: clamp(1.85rem, 4.5vw, 2.65rem);
+}
+
+.jk-cv-page .post-content > h2:first-child + p {
+  max-width: 760px;
+  font-size: 1.02rem;
+  line-height: 1.58;
+}
+
+.jk-cv-links {
+  margin-top: 1.15rem;
+  padding: 0.72rem 0;
+}
+
+.jk-cv-page .post-content > p:has(> code) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: -0.15rem 0 1.8rem;
+}
+
+.jk-cv-page .post-content > p:has(> code) code {
+  margin: 0;
+  padding: 0.22rem 0.5rem;
+}
+
+.jk-cv-page .post-content > h2:not(:first-child) {
+  margin-top: 2.35rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.48rem;
+  border-bottom: 1px solid var(--jk-border);
+  font-size: clamp(1.25rem, 2.8vw, 1.55rem);
+}
+
+.jk-cv-page .post-content > h3 {
+  margin-top: 1.1rem;
+  margin-bottom: 0.25rem;
+  padding-left: 0.72rem;
+  border-left-color: color-mix(in srgb, var(--jk-accent) 72%, var(--jk-border) 28%);
+}
+
+.jk-cv-page .post-content > h3 + p {
+  margin-top: 0.3rem;
+}
+
+.jk-cv-page table {
+  overflow: hidden;
+  margin: 0.8rem 0 1.8rem;
+  border: 1px solid var(--jk-border);
+  border-radius: var(--jk-radius);
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(127, 127, 127, 0.018);
+}
+
+.jk-cv-page th {
+  background: rgba(127, 127, 127, 0.05);
+  color: var(--jk-dim);
+  font-size: 0.77rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.jk-cv-page th,
+.jk-cv-page td {
+  border-bottom: 1px solid var(--jk-border);
+}
+
+.jk-cv-page tr:last-child td {
+  border-bottom: 0;
+}
+
+.jk-cv-page .post-content > ul {
+  margin: 0.6rem 0 1.45rem;
+  padding: 0;
+  border-top: 1px solid var(--jk-border);
+  list-style: none;
+}
+
+.jk-cv-page .post-content > ul li {
+  margin: 0;
+  padding: 0.48rem 0.15rem;
+  border-bottom: 1px solid var(--jk-border);
+}
+
+/* Project/talk indexes: preserve the card language but reduce visual weight. */
+.jk-project-card,
+.jk-talk-card {
+  border-radius: 11px;
+}
+
+.jk-project-card__body,
+.jk-talk-card__body {
+  padding: 0.9rem 1.05rem;
+}
+
+.jk-project-card--compact {
+  background: transparent;
+}
+
+.jk-project-card--compact:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Writing is intentionally closer to an index than a dashboard. */
+.jk-entry {
+  background: rgba(127, 127, 127, 0.018);
+}
+
+.jk-entry-body h2 {
+  letter-spacing: -0.015em;
+}
+
+/* Mobile: flatten the decorative shell before it becomes cramped. */
+@media (max-width: 700px) {
+  .header {
+    padding: 13px 12px;
+  }
+
+  .header__inner {
+    width: 100%;
+  }
+
+  .menu {
+    background: #fafafa;
+  }
+
+  .dark-theme .menu {
+    background: #252627;
+  }
+
+  .content > .jk-home,
+  .content > .jk-page,
+  .content > .jk-writing-page {
+    padding-top: 30px;
+  }
+
+  .jk-home-hero {
+    margin-top: 0;
+    padding: 24px 18px;
+    border-radius: 13px;
+    background:
+      radial-gradient(circle at 9% 12%, var(--jk-accent-soft), transparent 13rem),
+      rgba(127, 127, 127, 0.018);
+  }
+
+  .jk-home-hero::after {
+    display: none;
+  }
+
+  .jk-cv-page .jk-page-header {
+    display: block;
+  }
+
+  .jk-cv-page .jk-page-subtitle {
+    margin-top: 0.35rem;
+  }
+
+  .jk-cv-page .post-content > p:has(> code) {
+    margin-top: 0.1rem;
+  }
+
+  .jk-about-page .post-content > ul {
+    padding-left: 2rem;
+  }
+
+  .jk-polaroid {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jk-card-media img,
+  .jk-project-card__media img,
+  .jk-talk-card__media img,
+  .jk-card,
+  .jk-link-tile,
+  .jk-project-card,
+  .jk-talk-card,
+  .jk-entry {
+    transition: none;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Final small polish: give the technical panel enough room and make About
+   feel more deliberate without changing its content or markup.
+   ----------------------------------------------------------------------- */
+
+/* Homepage technical focus: keep the desktop lines intact. */
+@media (min-width: 901px) {
+  .jk-home-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 0.92fr);
+    gap: 30px;
+  }
+
+  .jk-focus-card pre {
+    white-space: pre;
+    overflow: visible;
+  }
+}
+
+/* About: cleaner editorial layout, still intentionally simple. */
+.jk-about-page {
+  max-width: 960px;
+}
+
+.jk-about-page .jk-page-header {
+  margin-bottom: 1.9rem;
+}
+
+.jk-about-page .jk-page-header h1 {
+  font-size: clamp(2.15rem, 4.5vw, 3.15rem);
+}
+
+.jk-about-page .post-content > h2:first-child {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.8rem, 4vw, 2.45rem);
+  letter-spacing: -0.03em;
+}
+
+.jk-about-page .post-content > h2:first-child a {
+  color: var(--jk-text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.jk-about-page .post-content > p {
+  max-width: 70ch;
+}
+
+/* Keep the photo, but make it read as a modern profile card rather than a
+   tilted scrapbook element. */
+.jk-about-page .jk-polaroid {
+  position: relative;
+  width: min(var(--jk-polaroid-max), 34%);
+  margin: 0.1rem 0 1.5rem 2.2rem;
+  border-color: color-mix(in srgb, var(--jk-border) 88%, var(--jk-accent) 12%);
+  border-radius: 14px;
+  background: var(--jk-panel-soft);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.07);
+  transform: none;
+}
+
+.dark-theme .jk-about-page .jk-polaroid {
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.jk-about-page .jk-polaroid figcaption {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.65rem;
+  left: 0.65rem;
+  padding: 0.42rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(20, 20, 22, 0.62);
+  color: #f4f4f5;
+  font-size: 0.78rem;
+  text-align: left;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Topic list: less like a big boxed Markdown list, more like a compact index. */
+.jk-about-page .post-content > h2 + p + ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--jk-border);
+  border-radius: 0;
+  background: transparent;
+  columns: auto;
+  list-style: none;
+}
+
+.jk-about-page .post-content > h2 + p + ul li {
+  position: relative;
+  margin: 0;
+  padding: 0.7rem 0.9rem 0.7rem 1.15rem;
+  border-bottom: 1px solid var(--jk-border);
+  break-inside: auto;
+}
+
+.jk-about-page .post-content > h2 + p + ul li:nth-child(odd) {
+  border-right: 1px solid var(--jk-border);
+}
+
+.jk-about-page .post-content > h2 + p + ul li::before {
+  position: absolute;
+  top: 1.12rem;
+  left: 0.2rem;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background: var(--jk-accent);
+  content: "";
+  opacity: 0.75;
+}
+
+/* Social links stay Markdown, but get a restrained control-like treatment. */
+.jk-about-page .jk-social-links {
+  margin: 0.8rem 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.jk-about-page .jk-social-links p {
+  gap: 0.5rem;
+}
+
+.jk-about-page .jk-social-links a {
+  min-height: 2.25rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--jk-border);
+  border-radius: 999px;
+  background: rgba(127, 127, 127, 0.025);
+  color: var(--jk-text);
+  text-decoration: none;
+}
+
+.jk-about-page .jk-social-links a:hover {
+  border-color: var(--jk-accent);
+  background: var(--jk-accent-soft);
+}
+
+/* The final four Markdown links become a compact site map. */
+.jk-about-page .jk-social-links + ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  columns: auto;
+  list-style: none;
+}
+
+.jk-about-page .jk-social-links + ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.jk-about-page .jk-social-links + ul a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.7rem;
+  box-sizing: border-box;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--jk-border);
+  border-radius: 9px;
+  background: rgba(127, 127, 127, 0.02);
+  color: var(--jk-text);
+  text-decoration: none;
+}
+
+.jk-about-page .jk-social-links + ul a::after {
+  color: var(--jk-dim);
+  content: "→";
+}
+
+.jk-about-page .jk-social-links + ul a:hover {
+  border-color: color-mix(in srgb, var(--jk-border) 45%, var(--jk-accent) 55%);
+  background: var(--jk-accent-soft);
+}
+
+@media (max-width: 900px) {
+  .jk-focus-card pre {
+    white-space: pre-wrap;
+  }
+
+  .jk-about-page .jk-polaroid {
+    width: min(var(--jk-polaroid-max), 38%);
+    margin-left: 1.5rem;
+  }
+
+  .jk-about-page .jk-social-links + ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .jk-about-page .jk-polaroid {
+    float: none;
+    width: min(var(--jk-polaroid-max), 100%);
+    margin: 0 0 1.4rem;
+  }
+
+  .jk-about-page .post-content > h2 + p + ul {
+    grid-template-columns: 1fr;
+  }
+
+  .jk-about-page .post-content > h2 + p + ul li:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .jk-about-page .jk-social-links + ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+

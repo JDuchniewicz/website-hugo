@@ -1,110 +1,91 @@
 +++
 title = "Projects"
-description = "Selected systems, hardware, Rust and game-tech work, newest/current work first."
+description = "Selected systems and projects"
 +++
 
-<p class="jk-page-subtitle">
-A compact index of things I have built or hacked on. Bigger stories link out to posts instead of turning this page into another giant About page.
-</p>
+## Featured systems
 
-<section class="jk-project-feature-section" aria-labelledby="featured-projects">
-  <h2 id="featured-projects">Featured systems</h2>
+{{< project id="pill-engine" meta="current · Rust · ECS · game tooling" title="Pill Engine" >}}
+Rust game-engine project focused on ECS, architecture, scripting experiments, hot reloading and making weird games easier to build.
 
-  <div class="jk-project-feature-grid">
-    <article class="jk-project-feature" id="pill-engine">
-      <div class="jk-project-feature-body">
-        <p class="jk-card-topline">current · Rust · ECS · game tooling</p>
-        <h3>Pill Engine / game-tech experiments</h3>
-        <p>Rust game-engine experiments around ECS, hot reload, C# scripting, FFI, networking and editor/tooling architecture.</p>
-        <div class="jk-skill-tags"><code>Rust</code><code>ECS</code><code>C#</code><code>FFI</code><code>Hot reload</code></div>
-        <div class="jk-card-links"><a href="https://github.com/MattSzymonski/Pill-Engine">GitHub</a><a href="#polyengine">Older engine work</a></div>
-      </div>
-    </article>
+`Rust` `ECS` `C#` `FFI` `Hot reload`
 
-    <article class="jk-project-feature" id="zled-frame">
-      <img src="/about_res/zephyr.jpeg" alt="ZLED Frame / Zephyr" loading="lazy" onerror="this.remove()">
-      <div class="jk-project-feature-body">
-        <p class="jk-card-topline">2024 · hardware · firmware · enclosure</p>
-        <h3>ZLED Frame</h3>
-        <p>Open-source/open-hardware NeoPixel LED frame: FreeCAD enclosure work, ESP32 firmware, Zephyr drivers, Wi-Fi networking and HTTP image upload.</p>
-        <div class="jk-skill-tags"><code>C</code><code>Zephyr</code><code>ESP32</code><code>Wi-Fi</code><code>3D printing</code></div>
-        <div class="jk-card-links"><a href="{{< relref "/posts/20-01-24-zled-frame-part1.md" >}}">Part 1</a><a href="{{< relref "/posts/27-03-24-zled-frame-part2.md" >}}">Part 2</a><a href="https://github.com/JDuchniewicz/zled-frame">GitHub</a></div>
-      </div>
-    </article>
+[GitHub](https://github.com/MattSzymonski/Pill-Engine) · [Older engine work](#polyengine)
+{{< /project >}}
 
-    <article class="jk-project-feature" id="bibop">
-      <img src="/bibop/case.png" alt="BIBoP wearable casing render" loading="lazy" onerror="this.remove()">
-      <div class="jk-project-feature-body">
-        <p class="jk-card-topline">2021–2023 · open hardware · embedded ML</p>
-        <h3>BIBoP wearable health monitor</h3>
-        <p>Open hardware wearable health-monitor prototype with embedded ML ambitions, later ported toward Zephyr and used for conference talks.</p>
-        <div class="jk-skill-tags"><code>Zephyr</code><code>Embedded ML</code><code>Wearables</code><code>Open hardware</code></div>
-        <div class="jk-card-links"><a href="{{< relref "/posts/31-05-21-bibop_1_Intro_ML.md" >}}">Intro post</a><a href="{{< relref "/posts/10-07-23-eoss.md" >}}">EOSS post</a></div>
-      </div>
-    </article>
+{{< project id="zled-frame" meta="2024 · Zephyr · ESP32" title="ZLED Frame" image="/about_res/zephyr.jpeg" alt="ZLED Frame / Zephyr" >}}
+Wi-Fi controlled NeoPixel art frame with CAD/enclosure work, ESP32 firmware, Zephyr drivers and HTTP image upload.
 
-    <article class="jk-project-feature" id="fpga-accelerated-tcpdump">
-      <div class="jk-project-feature-body">
-        <p class="jk-card-topline">research · FPGA · Linux · networking</p>
-        <h3>FPGA accelerated tcpdump using eBPF</h3>
-        <p>MSc thesis work on hardware-accelerated packet capture in embedded Linux using programmable logic, custom Linux/kernel work and power/performance measurements.</p>
-        <div class="jk-skill-tags"><code>FPGA</code><code>Linux</code><code>eBPF</code><code>Networking</code><code>Buildroot</code></div>
-        <div class="jk-card-links"><a href="{{< relref "/posts/18-10-20-first-thesis-released.md" >}}">Thesis note</a><a href="/FPGA-capture.pdf">PDF</a><a href="{{< relref "/talks/_index.md" >}}#state-of-open-con">Talk</a></div>
-      </div>
-    </article>
-  </div>
-</section>
+`C` `Zephyr` `ESP32` `Wi-Fi` `3D printing`
 
-<section class="jk-project-feature-section" aria-labelledby="project-archive">
-  <h2 id="project-archive">Archive / smaller things</h2>
+[Part 1]({{< relref "/posts/20-01-24-zled-frame-part1.md" >}}) · [Part 2]({{< relref "/posts/27-03-24-zled-frame-part2.md" >}}) · [GitHub](https://github.com/JDuchniewicz/zled-frame)
+{{< /project >}}
 
-  <div class="jk-project-archive">
-    <article id="game-jams">
-      <time>2025–now</time>
-      <div>
-        <h3>Game jams / Sticky Piston Studios</h3>
-        <p>Small games, prototypes, jam experiments and the recurring habit of building too much engine/tooling for too little time. Includes <a href="https://hist0r.itch.io/tiny-trucks">Tiny Trucks</a> and <a href="https://hist0r.itch.io/the-deluge">The Deluge</a>.</p>
-      </div>
-    </article>
+{{< project id="bibop" meta="2021–2023 · embedded ML" title="BIBoP" image="/bibop/case.png" alt="BIBoP wearable casing render" >}}
+Open hardware wearable health-monitor prototype with Blood Pressure inference from photoplethysmography sensor data.
 
-    <article id="rust-raytracer">
-      <time>2021</time>
-      <div>
-        <h3>C++ to Rust ray tracer</h3>
-        <p>Ray Tracing in One Weekend style exercise used as a practical bridge between C++ habits and Rust’s ownership-heavy mental model. <a href="{{< relref "/posts/26-02-21-cpp-to-rust.md" >}}">Read post</a>.</p>
-      </div>
-    </article>
+`Zephyr` `Embedded ML` `Wearables` `Open hardware`
 
-    <article id="rustalizer">
-      <time>2020–2021</time>
-      <div>
-        <h3>Rustalizer</h3>
-        <p>Audio frequency visualizer written in Rust, delivered as both a GTK desktop app and a console distraction in the spirit of old-school Winamp toys.</p>
-      </div>
-    </article>
+[Intro post]({{< relref "/posts/31-05-21-bibop_1_Intro_ML.md" >}}) · [EOSS post]({{< relref "/posts/10-07-23-eoss.md" >}})
+{{< /project >}}
 
-    <article id="polyengine">
-      <time>older</time>
-      <div>
-        <h3>PolyEngine</h3>
-        <p>Student-society game engine work using ECS/data-oriented design, C/C++, CMake/Meson and graphics/tooling experiments around Vulkan. <a href="https://github.com/PolyEngineTeam/PolyEngine/">GitHub</a>.</p>
-      </div>
-    </article>
+{{< project id="fpga-accelerated-tcpdump" meta="research · FPGA · Linux" title="FPGA accelerated tcpdump using eBPF" >}}
+MSc thesis project on hardware acceleration of packet capture in embedded Linux using FPGA programmable logic.
 
-    <article id="beagleboard-gsoc">
-      <time>2021</time>
-      <div>
-        <h3>GSoC beagleboard.org — GPGPU using OpenGL ES</h3>
-        <p>Computation acceleration on the BeagleBone Black using the SGX GPU instead of leaving it untouched except for rendering. <a href="https://github.com/JDuchniewicz/GPGPU-with-GLES">GitHub</a>.</p>
-      </div>
-    </article>
+`FPGA` `Linux` `eBPF` `Networking` `Buildroot`
 
-    <article id="envidrawer">
-      <time>older</time>
-      <div>
-        <h3>Envidrawer</h3>
-        <p>Embedded IoT / sensor / 3D-printing experiment: a home-garden under the bed, because apparently someone had to try it.</p>
-      </div>
-    </article>
-  </div>
-</section>
+[Thesis note]({{< relref "/posts/18-10-20-first-thesis-released.md" >}}) · [PDF](/FPGA-capture.pdf) · [Talk](/talks/#state-of-open-con)
+{{< /project >}}
+
+## Archive / smaller things
+
+{{< project id="game-jams" class="jk-project-card--compact" meta="2025–now" title="Game jams / Sticky Piston Studios" >}}
+Being a hardcore **gamejammer**, I am familiar with **Unity**, custom game engines and other popular tools of the trade.
+
+[Tiny Trucks](https://hist0r.itch.io/tiny-trucks) · [The Deluge](https://hist0r.itch.io/the-deluge)
+{{< /project >}}
+
+{{< project id="rust-raytracer" class="jk-project-card--compact" meta="2021" title="C++ to Rust - or how to render your mindset" >}}
+I will reimplement the amazing tutorial on *Ray Tracing in One Weekend* in the Rust programming language.
+
+[Read post]({{< relref "/posts/26-02-21-cpp-to-rust.md" >}})
+{{< /project >}}
+
+{{< project id="rustalizer" class="jk-project-card--compact" meta="2020–2021" title="Rustalizer" >}}
+{{< /project >}}
+
+{{< project id="polyengine" class="jk-project-card--compact" meta="older" title="PolyEngine" >}}
+[GitHub](https://github.com/PolyEngineTeam/PolyEngine/)
+{{< /project >}}
+
+{{< project id="beagleboard-gsoc" class="jk-project-card--compact" meta="2021" title="GSoC beagleboard.org — GPGPU using OpenGL ES" >}}
+GPGPU computing with BBB.
+
+[GitHub](https://github.com/JDuchniewicz/GPGPU-with-GLES)
+{{< /project >}}
+
+{{< project id="envidrawer" class="jk-project-card--compact" meta="older" title="Envidrawer" >}}
+A sustainable closed-space smart gardening solution.
+{{< /project >}}
+
+## Thesis abstracts
+
+### FPGA accelerated tcpdump using eBPF
+
+With the rise of the Internet of Things and the proliferation of embedded devices equipped with an accelerator arose a need for efficient resource utilization. Hardware acceleration is a complex topic that requires specialized domain knowledge about the platform and different trade-offs that have to be made, especially in the area of power consumption.
+
+The thesis focuses on accelerating networking packets utilizing a Field Programmable Gate Array in an embedded Linux System. The solution is based on a custom Linux distribution assembled using the Buildroot tool, specially configured and patched Linux kernel, uboot bootloader, and the programmable logic for packet acceleration.
+
+**Keywords:** Field Programmable Gate Array, Acceleration, Networking, Embedded Linux
+
+[PDF: FPGA accelerated tcpdump using eBPF](/FPGA-capture.pdf)
+
+### FPGA based hardware accelerator for musical synthesis for Linux system
+
+Work focuses on realizing an audio synthesizer in a System on Chip, utilizing FPGA hardware resources. It covers aspects of sound synthesis in hardware and writing Linux Device Drivers for communicating with the FPGA utilizing DMA.
+
+An optimal approach to synthesis is researched and assessed and LUT-based interpolation is asserted as the best choice for this project. A novel State Variable IIR Filter is implemented in Verilog and utilized.
+
+**Keywords:** FPGA, Sound Synthesis, SoC, DMA, SVF
+
+[PDF: FPGA based hardware accelerator for musical synthesis for Linux system](/FPGA-synth.pdf)

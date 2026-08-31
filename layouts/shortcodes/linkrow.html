@@ -1,0 +1,3 @@
+<nav class="jk-link-row{{ with .Get "class" }} {{ . }}{{ end }}" aria-label="{{ .Get "label" | default "Links" }}">
+  {{ .Inner | .Page.RenderString }}
+</nav>

@@ -1,0 +1,8 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "Photo" -}}
+{{- $caption := .Get "caption" | default "Hi! I’m Jakub 👋" -}}
+{{- $max := .Get "max" | default "280px" -}}
+<figure class="jk-polaroid" style="--jk-polaroid-max: {{ $max }}">
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="eager" onerror="this.closest('figure').remove()">
+  <figcaption>{{ $caption }}</figcaption>
+</figure>

@@ -1,0 +1,14 @@
+<article class="jk-project-card{{ with .Get "image" }} jk-project-card--with-media{{ end }}{{ with .Get "class" }} {{ . }}{{ end }}"{{ with .Get "id" }} id="{{ . }}"{{ end }}>
+  {{ with .Get "image" }}
+  <figure class="jk-project-card__media">
+    <img src="{{ . }}" alt="{{ $.Get "alt" }}" loading="lazy" onerror="this.closest('figure').remove()">
+  </figure>
+  {{ end }}
+  <div class="jk-project-card__body">
+    {{ with .Get "meta" }}<p class="jk-card-topline">{{ . }}</p>{{ end }}
+    <h2>{{ .Get "title" }}</h2>
+    <div class="jk-project-card__content">
+      {{ .Inner | .Page.RenderString }}
+    </div>
+  </div>
+</article>

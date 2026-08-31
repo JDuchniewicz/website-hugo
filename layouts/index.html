@@ -2,26 +2,23 @@
 <main class="jk-home" aria-role="main">
   <section class="jk-home-hero" aria-labelledby="home-title">
     <div class="jk-hero-copy">
-      <p class="jk-kicker">embedded · telecom · rust · fpga · game-dev</p>
+      <p class="jk-kicker">embedded systems · 5G · Rust · FPGA · game engines</p>
       <h1 id="home-title">Jakub Duchniewicz</h1>
-      <p class="jk-lede">
-        I build systems close to the metal: embedded software, 5G/L1 work, Rust tooling,
-        FPGA experiments, Zephyr devices and game-engine prototypes.
-      </p>
+      <p class="jk-lede">I work close to the hardware/software boundary: embedded systems, low-level programming, telecom, FPGAs, Rust, Linux, game engines and other things that tend to break in interesting ways.</p>
       <div class="jk-actions" aria-label="Primary links">
         <a class="jk-button jk-button-primary" href="{{ "/projects/" | relURL }}">Projects</a>
         <a class="jk-button" href="{{ "/posts/" | relURL }}">Writing</a>
         <a class="jk-button" href="{{ "/talks/" | relURL }}">Talks</a>
+        <a class="jk-button" href="{{ "/cv/" | relURL }}">CV</a>
       </div>
     </div>
 
-    <aside class="jk-focus-card" aria-label="Current focus snapshot">
-      <div class="jk-focus-card__top">current focus</div>
-      <pre><code>systems  embedded · linux · zephyr · seL4
+    <aside class="jk-focus-card" aria-label="Technical focus">
+      <div class="jk-focus-card__top">technical focus</div>
+      <pre><code>systems  C · C++ · Rust · Linux · Zephyr · seL4
 radio    5G NR L1 · Open RAN · FlexRAN
-rust     engines · tools · FFI · hot reload
-hw       FPGA · RISC-V · cursed prototypes
-site     rebuilding the lab notebook</code></pre>
+hw       FPGA · RISC-V · hardware acceleration
+engines  ECS · hot reload · tooling</code></pre>
     </aside>
   </section>
 
@@ -29,7 +26,7 @@ site     rebuilding the lab notebook</code></pre>
     <div class="jk-section-heading">
       <div>
         <p class="jk-kicker">selected work</p>
-        <h2 id="featured-work">Hardware/software boundary stuff</h2>
+        <h2 id="featured-work">Selected work</h2>
       </div>
       <a class="jk-mini-link" href="{{ "/projects/" | relURL }}">all projects →</a>
     </div>
@@ -40,9 +37,9 @@ site     rebuilding the lab notebook</code></pre>
           <img src="{{ "/about_res/zephyr.jpeg" | relURL }}" alt="ZLED Frame / Zephyr" loading="lazy" onerror="this.remove()">
           <span>2024</span>
         </div>
-        <div class="jk-card-topline">Zephyr · ESP32 · LEDs</div>
+        <div class="jk-card-topline">Zephyr · ESP32</div>
         <h3>ZLED Frame</h3>
-        <p>Wi‑Fi controlled NeoPixel art frame: CAD, enclosure, firmware, HTTP image upload and Zephyr driver work.</p>
+        <p>Wi-Fi controlled NeoPixel art frame with CAD/enclosure work, ESP32 firmware, Zephyr drivers and HTTP image upload.</p>
         <div class="jk-card-links">
           <a href="{{ "/projects/#zled-frame" | relURL }}">Project</a>
           <a href="{{ relref . "/posts/20-01-24-zled-frame-part1.md" }}">Part 1</a>
@@ -53,11 +50,11 @@ site     rebuilding the lab notebook</code></pre>
       <article class="jk-card">
         <div class="jk-card-media">
           <img src="{{ "/bibop/case.png" | relURL }}" alt="BIBoP wearable casing" loading="lazy" onerror="this.remove()">
-          <span>2023</span>
+          <span>2021–2023</span>
         </div>
-        <div class="jk-card-topline">Zephyr · wearable · ML</div>
-        <h3>BIBoP / AI wearable</h3>
-        <p>Open-hardware wearable health-monitor work, later used as a conference thread around Zephyr and embedded ML.</p>
+        <div class="jk-card-topline">embedded ML · open hardware</div>
+        <h3>BIBoP</h3>
+        <p>Open hardware wearable health-monitor prototype with Blood Pressure inference from photoplethysmography sensor data.</p>
         <div class="jk-card-links">
           <a href="{{ "/projects/#bibop" | relURL }}">Project</a>
           <a href="{{ relref . "/posts/31-05-21-bibop_1_Intro_ML.md" }}">Intro</a>
@@ -89,44 +86,20 @@ site     rebuilding the lab notebook</code></pre>
   </section>
   {{ end }}
 
-  <section class="jk-section" aria-labelledby="site-map">
+  <section class="jk-section" aria-labelledby="elsewhere">
     <div class="jk-section-heading">
       <div>
-        <p class="jk-kicker">site map</p>
-        <h2 id="site-map">Chronological indexes, not a maze</h2>
+        <p class="jk-kicker">elsewhere</p>
+        <h2 id="elsewhere">More of the site</h2>
       </div>
     </div>
 
     <div class="jk-link-grid">
-      <a class="jk-link-tile" href="{{ "/projects/" | relURL }}">
-        <strong>Projects</strong>
-        <span>Recent/current project work first, older work further down.</span>
-      </a>
-      <a class="jk-link-tile" href="{{ "/talks/" | relURL }}">
-        <strong>Talks</strong>
-        <span>Conference appearances and public speaking in reverse chronological order.</span>
-      </a>
-      <a class="jk-link-tile" href="{{ "/posts/" | relURL }}">
-        <strong>Writing</strong>
-        <span>Longer posts grouped by year, newest first.</span>
-      </a>
-      <a class="jk-link-tile" href="{{ "/notes/" | relURL }}">
-        <strong>Notes</strong>
-        <span>Shorter lab notes and debug breadcrumbs, also chronological.</span>
-      </a>
+      <a class="jk-link-tile" href="{{ "/about/" | relURL }}"><strong>About</strong><span>My personal space.</span></a>
+      <a class="jk-link-tile" href="{{ "/cv/" | relURL }}"><strong>CV</strong><span>Background, skills, education and selected work.</span></a>
+      <a class="jk-link-tile" href="{{ "/talks/" | relURL }}"><strong>Talks</strong><span>Conference talks, presentations and public appearances.</span></a>
+      <a class="jk-link-tile" href="{{ "/now/" | relURL }}"><strong>Now</strong><span>What I am currently focused on.</span></a>
     </div>
-  </section>
-
-  <section class="jk-section jk-now-strip" aria-labelledby="current-focus">
-    <div>
-      <p class="jk-kicker">now-ish</p>
-      <h2 id="current-focus">Current focus</h2>
-      <p>
-        Low-level systems, Rust engine tooling, seL4/sDDF networking experiments, FPGA/RISC‑V rabbit holes,
-        and making this site less dead without pretending every note has to be a polished essay.
-      </p>
-    </div>
-    <a class="jk-button" href="{{ "/now/" | relURL }}">Open /now</a>
   </section>
 </main>
 {{ end }}

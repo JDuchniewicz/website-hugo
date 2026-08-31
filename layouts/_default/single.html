@@ -1,15 +1,26 @@
 {{ define "main" }}
+  {{ if eq .Section "posts" }}
     <main class="post">
-        <article>
-            <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
-
-            {{ with .Params.Cover }}
-                <img src="/img/{{ . }}" class="post-cover" />
-            {{ end }}
-
-            <div class="post-content">
-                {{ .Content }}
-            </div>
-        </article>
+      <article>
+        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+        {{ with .Params.Cover }}<img src="/img/{{ . }}" class="post-cover" alt="">{{ end }}
+        <div class="post-content">{{ .Content }}</div>
+      </article>
     </main>
+  {{ else }}
+    {{ $isCV := eq .RelPermalink "/cv/" }}
+    {{ $isAbout := eq .RelPermalink "/about/" }}
+    {{ $isNow := eq .RelPermalink "/now/" }}
+    <main class="jk-page{{ if .Params.wide }} jk-page-wide{{ end }}{{ if $isCV }} jk-cv-page{{ end }}{{ if $isAbout }} jk-about-page{{ end }}{{ if $isNow }} jk-now-page{{ end }}{{ if eq .Section "notes" }} jk-page-narrow jk-notes-page{{ end }}">
+      <article>
+        <header class="jk-page-header">
+          {{ if eq .Section "notes" }}<p class="jk-kicker">lab note</p>{{ end }}
+          <h1>{{ .Title | markdownify }}</h1>
+          {{ with .Description }}<p class="jk-page-subtitle">{{ . }}</p>{{ end }}
+        </header>
+        {{ with .Params.Cover }}<img src="/img/{{ . }}" class="post-cover" alt="">{{ end }}
+        <div class="post-content">{{ .Content }}</div>
+      </article>
+    </main>
+  {{ end }}
 {{ end }}
