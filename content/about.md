@@ -28,7 +28,7 @@ In my free time I am doing a ton of **bouldering**, chasing them good waves :wav
 
 Short posts & long dives on:
 
-* Zephyr, Linux & other OSes
+* Linux, Zephyr & other OSes
 * MCUs, FPGAs and hardware acceleration
 * 5G, telecom and low-level systems work
 * Game-dev / engine architecture

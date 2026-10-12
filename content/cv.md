@@ -6,23 +6,31 @@ wide = true
 
 ## Low-level and embedded software engineer
 
-I design, build and debug systems focused on security and optimal execution, such as firmware, operating system kernels, radio modems, hardware accelerators or top-notch game engines.
+I design, build and debug systems focused on security and optimal execution, such as firmware, operating system kernels, radio modems, hardware accelerators or novel game engines.
 
 {{< linkrow class="jk-cv-links" label="CV links" >}}
-[Download CV PDF](/cv.pdf) · [GitHub](https://github.com/JDuchniewicz) · [LinkedIn](https://www.linkedin.com/in/jduchnie/) · [Email](mailto:j.duchniewicz@gmail.com)
+[Download full CV in PDF](/cv.pdf) · [GitHub](https://github.com/JDuchniewicz) · [LinkedIn](https://www.linkedin.com/in/jduchnie/) · [Email](mailto:j.duchniewicz@gmail.com)
 {{< /linkrow >}}
 
-`5G NR L1` `Embedded Linux / Zephyr` `FPGA acceleration` `Rust engines` `Public speaking`
+`5G NR L1` `Embedded Linux / Zephyr` `Hardware acceleration` `Game engines` `Public speaking`
 
 ## Experience
+
+### int2code GmbH · Remote
+
+I am currently working in the automotive domain, where I am developing a secure system for managing multiple ECUs.
 
 ### Trustworthy Systems · UNSW, Sydney
 
 I recently finished my contract at **[Trustworthy Systems]** at UNSW in Sydney where I was tasked with developing new drivers and components for the **[sDDF]** tooling based on **[seL4]** microkernel.
 
-### Tietoevry
+### Tietoevry · Various telco clients, Wrocław, Dresden
 
-Previously, I have worked as a programmer at **[Tietoevry]**, doing **5G NR L1** development from the Modem UE side on custom ASIC platforms for an **Unspecified Client**.
+I have also worked as a programmer and a team leader at **[Tietoevry]**, doing **5G NR L1** development both on the gNB and from the Modem UE side on custom ASIC platforms for various international clients.
+
+### Samsung Electronics · Warsaw, Suwon
+
+I was responsible for delivering the smart TV middleware based on Tizen OS, supporting clients across the world and working closely on software and hardware issues related to signal processing and multimedia display.
 
 ### Sticky Piston Studios
 
@@ -32,11 +40,11 @@ I am also a co-founder of **[Sticky Piston Studios]** — a jack-of-all-trades c
 
 | Area | Tools / technologies |
 | --- | --- |
-| Programming | `C` `C++` `Rust` `C#` `Python` `Verilog` `SystemVerilog` |
-| Embedded / systems | `Linux` `Zephyr` `Buildroot` `U-Boot` `Device drivers` `RTOS` `Hardware debugging` |
-| Telecom | `5G` `LTE` `NR L1` `Open RAN` `FlexRAN` `Radio networks` |
-| Hardware acceleration | `FPGA` `SoC` `DMA` `Packet processing` `Audio synthesis` |
-| Game / tooling | `Unity` `Custom engines` `ECS` `Data-oriented design` `Hot reloading` `Game jams` |
+| Programming | `C` `C++` `Rust` `C#` `Python` `ARM/x86/RISC‑V assembly` `Verilog` `SystemVerilog` |
+| Embedded / systems | `Linux` `Zephyr` `seL4` `Buildroot` `U-Boot` `Device drivers` `RTOS` `microcontrollers` |
+| Telecom | `5G` `LTE` `NR L1` `Open RAN` `FlexRAN` `modems` |
+| Hardware acceleration | `FPGA` `SoC` `DMA` `Packet processing` `Audio/video processing` |
+| Game / tooling | `Pill Engine` `Hot reloading` `ECS` `Data-oriented design` `Unity` `Game jams` |
 
 ## Education
 
